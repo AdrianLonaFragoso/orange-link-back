@@ -1,0 +1,144 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String?
+  avatarUrl String?  @map("avatar_url")
+  googleId  String?  @unique @map("google_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  dailyLogs          DailyLog[]
+  bodyMeasurements   BodyMeasurement[]
+  bodyStatusTargets  BodyStatusTargets?
+  supplements        Supplement[]
+  trainingConfig     TrainingConfig?
+  userNutritionPlans UserNutritionPlan[]
+  monthlyMissions    MonthlyMission[]
+  fastingConfigs     FastingConfig[]
+
+  @@map("users")
+}
+
+model DailyLog {
+  id               String   @id @default(uuid())
+  userId           String   @map("user_id")
+  date             DateTime @db.Date
+  waterIntake      Float    @default(0) @map("water_intake")
+  waterGoal        Float    @default(4) @map("water_goal")
+  dailyMissions    Json     @default("{}") @map("daily_missions")
+  trainingMissions Json     @default("{}") @map("training_missions")
+  supplementsTaken Json     @default("{}") @map("supplements_taken")
+  selectedMeals    Json     @default("{}") @map("selected_meals")
+  createdAt        DateTime @default(now()) @map("created_at")
+  updatedAt        DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, date])
+  @@map("daily_logs")
+}
+
+model BodyMeasurement {
+  id                String   @id @default(uuid())
+  userId            String   @map("user_id")
+  measuredAt        DateTime @map("measured_at")
+  weight            Float
+  height            Float
+  bodyFat           Float    @map("body_fat")
+  visceralFat       Float    @map("visceral_fat")
+  skeletalMuscle    Float    @map("skeletal_muscle")
+  bmi               Float
+  restingMetabolism Float    @map("resting_metabolism")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, measuredAt])
+  @@map("body_measurements")
+}
+
+model BodyStatusTargets {
+  userId         String  @id @map("user_id")
+  weight         Float?
+  bodyFat        Float?  @map("body_fat")
+  visceralFat    Float?  @map("visceral_fat")
+  skeletalMuscle Float?  @map("skeletal_muscle")
+  bmi            Float?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@map("body_status_targets")
+}
+
+model Supplement {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  name      String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, name])
+  @@map("supplements")
+}
+
+model TrainingConfig {
+  userId    String   @id @map("user_id")
+  intensity Int      @default(100)
+  endDate   DateTime @map("end_date") @db.Date
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@map("training_configs")
+}
+
+model FastingConfig {
+  userId      String   @id @map("user_id")
+  planType    String   @map("plan_type")
+  windowStart String   @map("window_start")
+  windowEnd   String   @map("window_end")
+  endDate     DateTime @map("end_date") @db.Date
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@map("fasting_configs")
+}
+
+model NutritionPlan {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  users UserNutritionPlan[]
+  @@map("nutrition_plans")
+}
+
+model UserNutritionPlan {
+  userId          String   @map("user_id")
+  nutritionPlanId String   @map("nutrition_plan_id")
+  selectedAt      DateTime @default(now()) @map("selected_at")
+
+  user User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan NutritionPlan @relation(fields: [nutritionPlanId], references: [id], onDelete: Cascade)
+
+  @@id([userId, nutritionPlanId])
+  @@map("user_nutrition_plans")
+}
+
+model MonthlyMission {
+  id      String   @id @default(uuid())
+  userId  String   @map("user_id")
+  month   DateTime @db.Date
+  bodyFat Boolean  @default(false) @map("body_fat")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, month])
+  @@map("monthly_missions")
+}
