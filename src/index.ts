@@ -41,11 +41,15 @@ app.use('/api/v1/calculators', calculatorsRoutes);
 
 app.use(errorHandler);
 
-seedPlans()
-  .then(() => console.log('Nutrition plans seeded'))
-  .catch((err) => console.error('Failed to seed plans:', err))
-  .finally(() => {
-    app.listen(PORT, () => {
-      console.log(`Orange Link Backend running on http://localhost:${PORT}`);
+if (!process.env.VERCEL) {
+  seedPlans()
+    .then(() => console.log('Nutrition plans seeded'))
+    .catch((err) => console.error('Failed to seed plans:', err))
+    .finally(() => {
+      app.listen(PORT, () => {
+        console.log(`Orange Link Backend running on http://localhost:${PORT}`);
+      });
     });
-  });
+}
+
+export default app;
