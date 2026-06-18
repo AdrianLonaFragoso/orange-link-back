@@ -34,7 +34,7 @@ export async function getDashboard(req: Request, res: Response, next: NextFuncti
     const supplementsTaken = (dailyLog.supplementsTaken as Record<string, boolean>) || {};
 
     const isAllTrainingDone = Object.values(trainingMissions).length > 0 && Object.values(trainingMissions).every(Boolean);
-    const isAllSupplementsDone = supplements.length > 0 && supplements.every((s) => supplementsTaken[s.id]);
+    const isAllSupplementsDone = supplements.length > 0 && supplements.every((s: { id: string }) => supplementsTaken[s.id]);
 
     const missions = [
       { key: 'water', label: 'Completa tu agua diaria', done: dailyMissions.water || false },

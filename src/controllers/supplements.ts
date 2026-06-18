@@ -19,7 +19,7 @@ export async function getSupplements(req: Request, res: Response, next: NextFunc
 
     const supplementsTaken = (dailyLog?.supplementsTaken as Record<string, boolean>) || {};
 
-    const result = supplements.map((s) => ({
+    const result = supplements.map((s: { id: string; name: string }) => ({
       id: s.id,
       name: s.name,
       taken: supplementsTaken[s.id] || false,
