@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import { errorHandler } from './middleware/errorHandler';
 import { seedPlans } from './controllers/nutrition';
 
+import healthRoutes from './routes/health';
 import dashboardRoutes from './routes/dashboard';
 import supplementsRoutes from './routes/supplements';
 import hydrationRoutes from './routes/hydration';
@@ -21,9 +22,8 @@ app.use(cors({ origin: '*', credentials: true }));
 app.use(morgan('dev'));
 app.use(express.json());
 
-app.get('/api/health', (_req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
-});
+app.use('/', healthRoutes);
+app.use('/api/health', healthRoutes);
 app.use('/api/v1/dashboard', dashboardRoutes);
 app.use('/api/v1/supplements', supplementsRoutes);
 app.use('/api/v1/hydration', hydrationRoutes);
