@@ -1,7 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import jwt from 'jsonwebtoken';
-
-const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret';
+import prisma from '../lib/prisma';
 
 export interface AuthPayload {
   userId: string;
@@ -16,25 +14,23 @@ declare global {
   }
 }
 
-export function auth(req: Request, res: Response, next: NextFunction) {
-  const header = req.headers.authorization;
-  if (!header?.startsWith('Bearer ')) {
-    res.status(401).json({ error: 'No token provided' });
-    return;
-  }
-
-  const token = header.slice(7);
+export async function auth(req: Request, res: Response, next: NextFunction) {
   try {
-    const payload = jwt.verify(token, JWT_SECRET) as AuthPayload;
-    req.authUser = payload;
+    const configuredId = process.env.DEFAULT_USER_ID;
+    if (configuredId) {
+      req.authUser = { userId: configuredId, email: '' };
+      return next();
+    }
+
+    const user = await prisma.user.findFirst();
+    if (!user) {
+      res.status(500).json({ error: 'No default user configured' });
+      return;
+    }
+
+    req.authUser = { userId: user.id, email: user.email };
     next();
   } catch {
-    res.status(401).json({ error: 'Invalid or expired token' });
+    res.status(500).json({ error: 'Auth setup failed' });
   }
-}
-
-export function generateToken(payload: AuthPayload): string {
-  return jwt.sign(payload, JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRES_IN || '7d' as any,
-  });
 }
