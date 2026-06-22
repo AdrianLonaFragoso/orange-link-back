@@ -90,9 +90,13 @@ model Supplement {
 }
 
 model TrainingConfig {
-  userId    String   @id @map("user_id")
-  intensity Int      @default(100)
-  endDate   DateTime @map("end_date") @db.Date
+  userId                     String   @id @map("user_id")
+  intensity                  Int      @default(100)
+  endDate                    DateTime @map("end_date") @db.Date
+  schedule                   Json     @default("{}")
+  templates                  Json     @default("{}")
+  trainingCompleted          Json     @default("{}") @map("training_completed")
+  trainingExerciseCompleted  Json     @default("{}") @map("training_exercise_completed")
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   @@map("training_configs")
