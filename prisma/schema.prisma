@@ -97,6 +97,8 @@ model TrainingConfig {
   templates                  Json     @default("{}")
   trainingCompleted          Json     @default("{}") @map("training_completed")
   trainingExerciseCompleted  Json     @default("{}") @map("training_exercise_completed")
+  restDays                   Json     @default("[]") @map("rest_days")
+  dayLabels                  Json     @default("{}") @map("day_labels")
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   @@map("training_configs")

@@ -92,6 +92,13 @@ function getDaysRemaining(endDate: Date): number {
   return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
 }
 
+const defaultRestDays = ['viernes', 'sabado', 'domingo'];
+
+const defaultDayLabels: Record<string, string> = {
+  lunes: 'Brazo y Hombro', martes: 'Pecho y Espalda', miercoles: 'Brazo y Hombro',
+  jueves: 'Pierna', viernes: 'Descanso', sabado: 'Descanso', domingo: 'Descanso',
+};
+
 export async function getTraining(req: Request, res: Response, next: NextFunction) {
   try {
     const userId = req.authUser!.userId;
@@ -109,6 +116,8 @@ export async function getTraining(req: Request, res: Response, next: NextFunctio
           endDate: defaultEnd,
           schedule: defaultSchedule,
           templates: defaultTemplates,
+          restDays: defaultRestDays,
+          dayLabels: defaultDayLabels,
         },
       });
     }
@@ -130,6 +139,8 @@ export async function getTraining(req: Request, res: Response, next: NextFunctio
       templates: config.templates,
       completed: config.trainingCompleted,
       exerciseCompleted: config.trainingExerciseCompleted,
+      restDays: config.restDays,
+      dayLabels: config.dayLabels,
     });
   } catch (err) {
     next(err);
@@ -139,7 +150,7 @@ export async function getTraining(req: Request, res: Response, next: NextFunctio
 export async function updateTraining(req: Request, res: Response, next: NextFunction) {
   try {
     const userId = req.authUser!.userId;
-    const { intensity, endDate, schedule, completed, exerciseCompleted, templates } = req.body;
+    const { intensity, endDate, schedule, completed, exerciseCompleted, templates, restDays, dayLabels } = req.body;
 
     if (intensity !== undefined && (typeof intensity !== 'number' || intensity < 10 || intensity > 100)) {
       throw new AppError(400, 'Intensity must be between 10 and 100');
@@ -152,6 +163,8 @@ export async function updateTraining(req: Request, res: Response, next: NextFunc
     if (completed !== undefined) data.trainingCompleted = completed;
     if (exerciseCompleted !== undefined) data.trainingExerciseCompleted = exerciseCompleted;
     if (templates !== undefined) data.templates = templates;
+    if (restDays !== undefined) data.restDays = restDays;
+    if (dayLabels !== undefined) data.dayLabels = dayLabels;
 
     const config = await prisma.trainingConfig.upsert({
       where: { userId },
@@ -163,6 +176,8 @@ export async function updateTraining(req: Request, res: Response, next: NextFunc
         templates: templates ?? defaultTemplates,
         trainingCompleted: completed ?? {},
         trainingExerciseCompleted: exerciseCompleted ?? {},
+        restDays: restDays ?? defaultRestDays,
+        dayLabels: dayLabels ?? defaultDayLabels,
       },
       update: data,
     });
@@ -175,6 +190,8 @@ export async function updateTraining(req: Request, res: Response, next: NextFunc
       templates: config.templates,
       completed: config.trainingCompleted,
       exerciseCompleted: config.trainingExerciseCompleted,
+      restDays: config.restDays,
+      dayLabels: config.dayLabels,
     });
   } catch (err) {
     next(err);

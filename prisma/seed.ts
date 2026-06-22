@@ -92,6 +92,11 @@ async function main() {
   }
 
   const defaultEnd = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
+  const defaultRestDays = ['viernes', 'sabado', 'domingo'];
+  const defaultDayLabels: Record<string, string> = {
+    lunes: 'Brazo y Hombro', martes: 'Pecho y Espalda', miercoles: 'Brazo y Hombro',
+    jueves: 'Pierna', viernes: 'Descanso', sabado: 'Descanso', domingo: 'Descanso',
+  };
 
   await prisma.trainingConfig.upsert({
     where: { userId: user.id },
@@ -101,10 +106,14 @@ async function main() {
       endDate: defaultEnd,
       schedule: defaultSchedule,
       templates: defaultTemplates,
+      restDays: defaultRestDays,
+      dayLabels: defaultDayLabels,
     },
     update: {
       schedule: defaultSchedule,
       templates: defaultTemplates,
+      restDays: defaultRestDays,
+      dayLabels: defaultDayLabels,
     },
   });
 
