@@ -79,24 +79,21 @@ export async function toggleSupplement(req: Request, res: Response, next: NextFu
       throw new AppError(404, 'Supplement not found');
     }
 
-    const dailyLog = await prisma.dailyLog.upsert({
+    const existingLog = await prisma.dailyLog.findUnique({
+      where: { userId_date: { userId, date: today } },
+    });
+
+    const current = (existingLog?.supplementsTaken as Record<string, boolean>) || {};
+    const newValue = !current[id];
+
+    const updated = await prisma.dailyLog.upsert({
       where: { userId_date: { userId, date: today } },
       create: {
         userId,
         date: today,
-        supplementsTaken: { [id]: true },
+        supplementsTaken: { [id]: newValue },
       },
       update: {
-        supplementsTaken: undefined,
-      },
-    });
-
-    const current = (dailyLog.supplementsTaken as Record<string, boolean>) || {};
-    const newValue = !current[id];
-
-    const updated = await prisma.dailyLog.update({
-      where: { userId_date: { userId, date: today } },
-      data: {
         supplementsTaken: { ...current, [id]: newValue },
       },
     });
