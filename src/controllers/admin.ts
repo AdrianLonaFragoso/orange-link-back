@@ -214,7 +214,7 @@ const ADMIN_HTML = (users: any[], message?: string, error?: string) => `<!DOCTYP
           <td>
             <div class="actions">
               ${u.status !== 'approved' ? `<form method="POST" action="/admin/approve/${u.id}" style="margin:0"><button class="btn btn-approve" type="submit">Aprobar</button></form>` : ''}
-              ${u.status !== 'rejected' ? `<form method="POST" action="/admin/reject/${u.id}" style="margin:0"><button class="btn btn-reject" type="submit">Rechazar</button></form>` : ''}
+              ${u.status === 'pending' ? `<form method="POST" action="/admin/reject/${u.id}" style="margin:0"><button class="btn btn-reject" type="submit">Rechazar</button></form>` : ''}
               ${u.status !== 'pending' ? `
               <button class="btn btn-edit" onclick='openEdit("${u.id}", ${JSON.stringify(u.name || '')}, ${JSON.stringify(u.email)}, "${u.status}")'>Editar</button>
               <button class="btn btn-delete" onclick='openDelete("${u.id}", ${JSON.stringify(u.name || u.email)})'>Eliminar</button>` : ''}

@@ -30,30 +30,15 @@ export async function getFasting(req: Request, res: Response, next: NextFunction
   try {
     const userId = req.authUser!.userId;
 
-    let config = await prisma.fastingConfig.findUnique({ where: { userId } });
-
-    if (!config) {
-      config = await prisma.fastingConfig.create({
-        data: {
-          userId,
-          planType: '16-8',
-          windowStart: '08:00',
-          windowEnd: '16:00',
-          endDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
-        },
-      });
-    }
-
-    const daysRemaining = getDaysRemaining(config.endDate);
-    const eating = isEatingWindow(config.windowStart, config.windowEnd);
+    const config = await prisma.fastingConfig.findUnique({ where: { userId } });
 
     res.json({
-      planType: config.planType,
-      windowStart: config.windowStart,
-      windowEnd: config.windowEnd,
-      endDate: config.endDate.toISOString().split('T')[0],
-      daysRemaining,
-      isEatingWindow: eating,
+      planType: config?.planType ?? null,
+      windowStart: config?.windowStart ?? null,
+      windowEnd: config?.windowEnd ?? null,
+      endDate: config ? config.endDate.toISOString().split('T')[0] : null,
+      daysRemaining: config ? getDaysRemaining(config.endDate) : null,
+      isEatingWindow: config ? isEatingWindow(config.windowStart, config.windowEnd) : null,
     });
   } catch (err) {
     next(err);

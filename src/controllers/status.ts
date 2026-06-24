@@ -55,11 +55,11 @@ export async function createMeasurement(req: Request, res: Response, next: NextF
         measuredAt: new Date(),
         weight,
         height,
-        bodyFat: bodyFat ?? 0,
-        visceralFat: visceralFat ?? 0,
-        skeletalMuscle: skeletalMuscle ?? 0,
+        bodyFat: bodyFat ?? null,
+        visceralFat: visceralFat ?? null,
+        skeletalMuscle: skeletalMuscle ?? null,
         bmi,
-        restingMetabolism: restingMetabolism ?? 0,
+        restingMetabolism: restingMetabolism ?? null,
       },
     });
 

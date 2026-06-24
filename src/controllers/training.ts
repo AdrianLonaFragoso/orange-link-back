@@ -105,22 +105,7 @@ export async function getTraining(req: Request, res: Response, next: NextFunctio
     const today = new Date();
     today.setUTCHours(0, 0, 0, 0);
 
-    let config = await prisma.trainingConfig.findUnique({ where: { userId } });
-
-    if (!config) {
-      const defaultEnd = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
-      config = await prisma.trainingConfig.create({
-        data: {
-          userId,
-          intensity: 100,
-          endDate: defaultEnd,
-          schedule: defaultSchedule,
-          templates: defaultTemplates,
-          restDays: defaultRestDays,
-          dayLabels: defaultDayLabels,
-        },
-      });
-    }
+    const config = await prisma.trainingConfig.findUnique({ where: { userId } });
 
     const dailyLog = await prisma.dailyLog.upsert({
       where: { userId_date: { userId, date: today } },
@@ -131,16 +116,16 @@ export async function getTraining(req: Request, res: Response, next: NextFunctio
     const trainingMissions = (dailyLog.trainingMissions as Record<string, boolean>) || {};
 
     res.json({
-      intensity: config.intensity,
-      endDate: config.endDate.toISOString().split('T')[0],
-      daysRemaining: getDaysRemaining(config.endDate),
+      intensity: config?.intensity ?? null,
+      endDate: config?.endDate ? config.endDate.toISOString().split('T')[0] : null,
+      daysRemaining: config ? getDaysRemaining(config.endDate) : null,
       trainingMissions,
-      schedule: config.schedule,
-      templates: config.templates,
-      completed: config.trainingCompleted,
-      exerciseCompleted: config.trainingExerciseCompleted,
-      restDays: config.restDays,
-      dayLabels: config.dayLabels,
+      schedule: config?.schedule ?? null,
+      templates: config?.templates ?? null,
+      completed: config?.trainingCompleted ?? null,
+      exerciseCompleted: config?.trainingExerciseCompleted ?? null,
+      restDays: config?.restDays ?? null,
+      dayLabels: config?.dayLabels ?? null,
     });
   } catch (err) {
     next(err);
@@ -170,14 +155,14 @@ export async function updateTraining(req: Request, res: Response, next: NextFunc
       where: { userId },
       create: {
         userId,
-        intensity: intensity ?? 100,
-        endDate: endDate ? new Date(endDate) : new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
-        schedule: schedule ?? defaultSchedule,
-        templates: templates ?? defaultTemplates,
-        trainingCompleted: completed ?? {},
-        trainingExerciseCompleted: exerciseCompleted ?? {},
-        restDays: restDays ?? defaultRestDays,
-        dayLabels: dayLabels ?? defaultDayLabels,
+        ...(intensity !== undefined && { intensity }),
+        ...(endDate && { endDate: new Date(endDate) }),
+        ...(schedule !== undefined && { schedule }),
+        ...(templates !== undefined && { templates }),
+        ...(completed !== undefined && { trainingCompleted: completed }),
+        ...(exerciseCompleted !== undefined && { trainingExerciseCompleted: exerciseCompleted }),
+        ...(restDays !== undefined && { restDays }),
+        ...(dayLabels !== undefined && { dayLabels }),
       },
       update: data,
     });
