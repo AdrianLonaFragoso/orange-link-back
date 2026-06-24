@@ -1,5 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
-import prisma from '../lib/prisma';
+import jwt from 'jsonwebtoken';
+import { AppError } from './errorHandler';
+
+const JWT_SECRET = process.env.JWT_SECRET || 'orangelink-dev-secret';
 
 export interface AuthPayload {
   userId: string;
@@ -16,21 +19,22 @@ declare global {
 
 export async function auth(req: Request, res: Response, next: NextFunction) {
   try {
-    const configuredId = process.env.DEFAULT_USER_ID;
-    if (configuredId) {
-      req.authUser = { userId: configuredId, email: '' };
-      return next();
+    const header = req.headers.authorization;
+    if (!header || !header.startsWith('Bearer ')) {
+      throw new AppError(401, 'Token de acceso requerido');
     }
 
-    const user = await prisma.user.findFirst();
-    if (!user) {
-      res.status(500).json({ error: 'No default user configured' });
-      return;
+    const token = header.slice(7);
+    let payload: AuthPayload;
+    try {
+      payload = jwt.verify(token, JWT_SECRET) as AuthPayload;
+    } catch {
+      throw new AppError(401, 'Token inválido o expirado');
     }
 
-    req.authUser = { userId: user.id, email: user.email };
+    req.authUser = { userId: payload.userId, email: payload.email };
     next();
-  } catch {
-    res.status(500).json({ error: 'Auth setup failed' });
+  } catch (err) {
+    next(err);
   }
 }

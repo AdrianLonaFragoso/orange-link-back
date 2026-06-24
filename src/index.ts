@@ -15,6 +15,7 @@ import trainingRoutes from './routes/training';
 import statusRoutes from './routes/status';
 import calculatorsRoutes from './routes/calculators';
 import userRoutes from './routes/user';
+import authRoutes from './routes/auth';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -34,6 +35,7 @@ app.use('/api/v1/training', trainingRoutes);
 app.use('/api/v1/status', statusRoutes);
 app.use('/api/v1/calculators', calculatorsRoutes);
 app.use('/api/v1/user', userRoutes);
+app.use('/api/v1/auth', authRoutes);
 
 app.use(errorHandler);
 
