@@ -13,6 +13,7 @@ model User {
   name         String?
   password     String
   refreshToken String?  @map("refresh_token")
+  status       String   @default("pending")
   avatarUrl    String?  @map("avatar_url")
   googleId     String?  @unique @map("google_id")
   createdAt    DateTime @default(now()) @map("created_at")

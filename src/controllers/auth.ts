@@ -34,31 +34,17 @@ export async function register(req: Request, res: Response, next: NextFunction) 
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = await prisma.user.create({
+    await prisma.user.create({
       data: {
         email,
         name: name || email.split('@')[0],
         password: hashedPassword,
+        status: 'pending',
       },
-    });
-
-    const accessToken = generateAccessToken(user.id, user.email);
-    const refreshToken = generateRefreshToken(user.id);
-
-    await prisma.user.update({
-      where: { id: user.id },
-      data: { refreshToken },
     });
 
     res.status(201).json({
-      accessToken,
-      refreshToken,
-      user: {
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        registrationDate: user.createdAt.toISOString(),
-      },
+      message: 'Registro exitoso. Tu cuenta está pendiente de aprobación por un administrador.',
     });
   } catch (err) {
     next(err);
@@ -81,6 +67,13 @@ export async function login(req: Request, res: Response, next: NextFunction) {
     const valid = await bcrypt.compare(password, user.password);
     if (!valid) {
       throw new AppError(401, 'Credenciales inválidas');
+    }
+
+    if (user.status === 'pending') {
+      throw new AppError(403, 'Tu cuenta está pendiente de aprobación');
+    }
+    if (user.status === 'rejected') {
+      throw new AppError(403, 'Tu cuenta ha sido rechazada');
     }
 
     const accessToken = generateAccessToken(user.id, user.email);
