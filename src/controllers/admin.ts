@@ -67,10 +67,12 @@ const ADMIN_HTML = (users: any[], message?: string, error?: string) => `<!DOCTYP
   .btn-approve:hover { background: rgba(34,197,94,0.25); }
   .btn-reject { background: rgba(239,68,68,0.15); color: #ef4444; }
   .btn-reject:hover { background: rgba(239,68,68,0.25); }
-  .btn-edit { background: rgba(59,130,246,0.15); color: #3b82f6; }
-  .btn-edit:hover { background: rgba(59,130,246,0.25); }
-  .btn-delete { background: rgba(239,68,68,0.1); color: #ef4444; }
-  .btn-delete:hover { background: rgba(239,68,68,0.2); }
+.btn-edit { background: rgba(59,130,246,0.15); color: #3b82f6; }
+.btn-edit:hover { background: rgba(59,130,246,0.25); }
+.btn-templates { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.btn-templates:hover { background: rgba(245,158,11,0.25); }
+.btn-delete { background: rgba(239,68,68,0.1); color: #ef4444; }
+.btn-delete:hover { background: rgba(239,68,68,0.2); }
   .btn-primary {
     background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff;
     padding: 0.6rem 1.2rem; border: none; border-radius: 10px;
@@ -90,12 +92,14 @@ const ADMIN_HTML = (users: any[], message?: string, error?: string) => `<!DOCTYP
   }
   .toast {
     position: fixed; top: 1rem; right: 1rem; padding: 0.75rem 1.25rem; border-radius: 10px;
-    font-size: 0.875rem; font-weight: 600; z-index: 1000;
+    font-size: 0.875rem; font-weight: 600; z-index: 1000; cursor: pointer;
     animation: slideIn 0.3s ease;
   }
   .toast.success { background: rgba(34,197,94,0.2); border: 1px solid rgba(34,197,94,0.3); color: #22c55e; }
   .toast.error { background: rgba(239,68,68,0.2); border: 1px solid rgba(239,68,68,0.3); color: #ef4444; }
+  .toast.hiding { animation: slideOut 0.3s ease forwards; }
   @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+  @keyframes slideOut { from { transform: translateX(0); opacity: 1; } to { transform: translateX(100%); opacity: 0; } }
   .empty { text-align: center; padding: 3rem; color: #8e8e93; }
   .login-box {
     max-width: 360px; margin: 4rem auto; background: #1c1c1e; border-radius: 16px;
@@ -217,6 +221,7 @@ const ADMIN_HTML = (users: any[], message?: string, error?: string) => `<!DOCTYP
               ${u.status === 'pending' ? `<form method="POST" action="/admin/reject/${u.id}" style="margin:0"><button class="btn btn-reject" type="submit">Rechazar</button></form>` : ''}
               ${u.status !== 'pending' ? `
               <button class="btn btn-edit" onclick='openEdit("${u.id}", ${JSON.stringify(u.name || '')}, ${JSON.stringify(u.email)}, "${u.status}")'>Editar</button>
+              <button class="btn btn-templates" onclick='openTemplates("${u.id}", ${JSON.stringify(u.name || u.email)})'>Plantillas</button>
               <button class="btn btn-delete" onclick='openDelete("${u.id}", ${JSON.stringify(u.name || u.email)})'>Eliminar</button>` : ''}
             </div>
           </td>
@@ -224,6 +229,46 @@ const ADMIN_HTML = (users: any[], message?: string, error?: string) => `<!DOCTYP
         `).join('')}
       </tbody>
     </table>
+  </div>
+</div>
+
+<!-- Templates Modal -->
+<div id="modal-templates" class="modal-overlay" onclick="if(event.target===this)closeModal('templates')">
+  <div class="modal" onclick="event.stopPropagation()" style="max-width:560px">
+    <h3>Plantillas de entrenamiento</h3>
+    <p class="sub" id="templates-user-label">—</p>
+
+    <!-- Current templates list -->
+    <div id="templates-list" class="space-y-1" style="margin-bottom:1.5rem"></div>
+
+    <hr style="border-color:rgba(255,255,255,0.06);margin-bottom:1.5rem">
+
+    <!-- Add template form -->
+    <h4 style="font-size:0.85rem;font-weight:800;margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.04em">Agregar plantilla</h4>
+
+    <div class="space-y-3">
+      <div>
+        <label>Nombre de la plantilla</label>
+        <input type="text" id="template-name" placeholder="Ej: Brazo y Hombro" />
+      </div>
+      <div>
+        <label>CSV de ejercicios</label>
+        <textarea id="template-csv" rows="6" style="width:100%;padding:0.7rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:#0f0f13;color:#e8e8ed;font-size:0.85rem;font-family:monospace;resize:vertical" placeholder="nombre,target,sets,unit,muscle&#10;Curl martillo,15,3,reps,Bíceps&#10;Jalón de tríceps,15,3,reps,Tríceps&#10;Elevaciones laterales,15,3,reps,Hombro"></textarea>
+      </div>
+      <div>
+        <label>O sube un archivo CSV</label>
+        <input type="file" id="template-file" accept=".csv" style="width:100%;padding:0.5rem 0;color:#8e8e93;font-size:0.8rem" />
+      </div>
+      <div style="display:flex;justify-content:flex-end;gap:0.5rem">
+        <button class="btn btn-copy" id="btn-copy-format" onclick="copyFormatCSV()" type="button" style="font-size:0.65rem">📋 Copiar formato</button>
+        <button class="btn btn-approve" onclick="downloadSampleCSV()" type="button" style="font-size:0.65rem">📄 Descargar CSV de ejemplo</button>
+      </div>
+      <div id="template-error" class="modal-error" style="display:none"></div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-cancel" onclick="closeModal('templates')">Cerrar</button>
+        <button type="button" class="btn btn-submit" id="btn-submit-template" onclick="submitTemplate()">Cargar plantilla</button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -300,6 +345,163 @@ function openDelete(id, label) {
   document.getElementById('delete-form').action = '/admin/delete/' + id;
   openModal('delete');
 }
+document.querySelectorAll('.toast').forEach(t => {
+  t.addEventListener('click', () => { t.classList.add('hiding'); setTimeout(() => t.remove(), 300); });
+  setTimeout(() => { t.classList.add('hiding'); setTimeout(() => t.remove(), 300); }, 4000);
+});
+
+// Templates
+let currentTplUserId = '';
+
+function openTemplates(userId, label) {
+  currentTplUserId = userId;
+  document.getElementById('templates-user-label').textContent = 'Usuario: ' + label;
+  document.getElementById('template-name').value = '';
+  document.getElementById('template-csv').value = '';
+  document.getElementById('template-error').style.display = 'none';
+  document.getElementById('btn-submit-template').textContent = 'Cargar plantilla';
+  loadTemplates(userId);
+  openModal('templates');
+}
+
+function loadTemplates(userId) {
+  fetch('/admin/templates/' + userId + '/json')
+    .then(r => r.json())
+    .then(data => {
+      const list = document.getElementById('templates-list');
+      const entries = Object.entries(data.templates || {});
+      if (entries.length === 0) {
+        list.innerHTML = '<p style="color:#8e8e93;font-size:0.8rem;text-align:center;padding:1rem">No hay plantillas guardadas</p>';
+        return;
+      }
+      list.innerHTML = entries.map(([name, exercises]) => {
+        var nameEsc = name.replace(/"/g, '&quot;');
+        var exercisesEsc = JSON.stringify(exercises).replace(/"/g, '&quot;');
+        return '<div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.03);border-radius:10px;padding:0.6rem 0.8rem;margin-bottom:0.4rem">' +
+          '<div style="flex:1;min-width:0">' +
+            '<strong style="font-size:0.8rem;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + name + '</strong>' +
+            '<span style="font-size:0.7rem;color:#8e8e93">' + exercises.length + ' ejercicio' + (exercises.length !== 1 ? 's' : '') + '</span>' +
+          '</div>' +
+          '<div style="display:flex;gap:0.3rem">' +
+            '<button class="btn btn-edit tpl-edit" data-tplname="' + nameEsc + '" data-tpl-exercises="' + exercisesEsc + '" style="padding:0.3rem 0.6rem;font-size:0.65rem">Editar</button>' +
+            '<button class="btn btn-delete tpl-del" data-tplname="' + nameEsc + '" style="padding:0.3rem 0.6rem;font-size:0.65rem">Eliminar</button>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+      list.querySelectorAll('.tpl-del').forEach(function(btn) {
+        btn.addEventListener('click', function() { deleteTemplate(userId, btn.getAttribute('data-tplname')); });
+      });
+      list.querySelectorAll('.tpl-edit').forEach(function(btn) {
+        btn.addEventListener('click', function() { editTemplate(btn); });
+      });
+    })
+    .catch(function() {
+      document.getElementById('templates-list').innerHTML = '<p style="color:#ef4444;font-size:0.8rem;text-align:center;padding:1rem">Error al cargar plantillas</p>';
+    });
+}
+
+document.getElementById('template-file')?.addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(ev) {
+    document.getElementById('template-csv').value = ev.target.result;
+  };
+  reader.readAsText(file);
+});
+
+function submitTemplate() {
+  const name = document.getElementById('template-name').value.trim();
+  const csv = document.getElementById('template-csv').value.trim();
+  const errEl = document.getElementById('template-error');
+
+  if (!name) { errEl.textContent = 'El nombre de la plantilla es requerido'; errEl.style.display = 'block'; return; }
+  if (!csv) { errEl.textContent = 'El CSV de ejercicios es requerido'; errEl.style.display = 'block'; return; }
+  errEl.style.display = 'none';
+
+  fetch('/admin/templates/' + currentTplUserId, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ templateName: name, csvContent: csv }),
+  })
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) {
+        errEl.textContent = data.error;
+        errEl.style.display = 'block';
+        return;
+      }
+      document.getElementById('template-name').value = '';
+      document.getElementById('template-csv').value = '';
+      loadTemplates(currentTplUserId);
+    })
+    .catch(() => {
+      errEl.textContent = 'Error al subir la plantilla';
+      errEl.style.display = 'block';
+    });
+}
+
+function deleteTemplate(userId, name) {
+  fetch('/admin/templates/' + userId + '/delete', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ templateName: name }),
+  })
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) {
+        document.getElementById('template-error').textContent = data.error;
+        document.getElementById('template-error').style.display = 'block';
+        return;
+      }
+      loadTemplates(currentTplUserId);
+    })
+    .catch(() => {
+      document.getElementById('template-error').textContent = 'Error al eliminar la plantilla';
+      document.getElementById('template-error').style.display = 'block';
+    });
+}
+
+function editTemplate(btn) {
+  var name = btn.getAttribute('data-tplname');
+  var exercisesJson = btn.getAttribute('data-tpl-exercises');
+  if (!exercisesJson) return;
+  try {
+    var exercises = JSON.parse(exercisesJson);
+  } catch(e) { return; }
+
+  document.getElementById('template-name').value = name;
+  document.getElementById('btn-submit-template').textContent = 'Actualizar plantilla';
+
+  var header = 'nombre,target,sets,unit,muscle';
+  var rows = exercises.map(function(ex) {
+    var muscle = ex.muscleGroup || '';
+    return ex.name + ',' + ex.target + ',' + ex.sets + ',' + ex.unit + ',' + muscle;
+  });
+  document.getElementById('template-csv').value = header + '\\n' + rows.join('\\n');
+
+  document.querySelector('.space-y-3').scrollIntoView({ behavior: 'smooth' });
+}
+
+function downloadSampleCSV() {
+  const csv = 'nombre,target,sets,unit,muscle\\nCurl martillo,15,3,reps,Bíceps\\nJalón de tríceps en polea,15,3,reps,Tríceps\\nElevaciones laterales,15,3,reps,Hombro\\nPress de banca con mancuernas,12,4,reps,Pecho\\nRemo en polea,12,4,reps,Espalda\\nSentadilla asistida,15,3,reps,Pierna';
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'plantilla_ejemplo.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function copyFormatCSV() {
+  const csv = 'nombre,target,sets,unit,muscle\\nCurl martillo,15,3,reps,Bíceps\\nJalón de tríceps en polea,15,3,reps,Tríceps';
+  navigator.clipboard.writeText(csv).catch(function() {});
+  var btn = document.getElementById('btn-copy-format');
+  var orig = btn.textContent;
+  btn.textContent = '✓ Copiado';
+  setTimeout(function() { btn.textContent = orig; }, 2000);
+}
 </script>
 </body>
 </html>`;
@@ -350,15 +552,17 @@ const LOGIN_HTML = (error?: string) => `<!DOCTYPE html>
 </body>
 </html>`;
 
-export function getAdmin(_req: Request, res: Response) {
-  const token = _req.cookies?.admin_token as string | undefined;
+export function getAdmin(req: Request, res: Response) {
+  const token = req.cookies?.admin_token as string | undefined;
   if (!token) {
     res.send(LOGIN_HTML());
     return;
   }
   try {
     jwt.verify(token, JWT_SECRET);
-    renderDashboard(res);
+    const message = typeof req.query.message === 'string' ? req.query.message : undefined;
+    const error = typeof req.query.error === 'string' ? req.query.error : undefined;
+    renderDashboard(res, message, error);
   } catch {
     res.clearCookie('admin_token');
     res.send(LOGIN_HTML());
@@ -379,7 +583,7 @@ export async function loginAdmin(req: Request, res: Response, next: NextFunction
       sameSite: 'lax',
       maxAge: 24 * 60 * 60 * 1000,
     });
-    await renderDashboard(res);
+    res.redirect('/admin');
   } catch (err) {
     next(err);
   }
@@ -398,7 +602,7 @@ export async function approveUser(req: Request, res: Response, next: NextFunctio
       throw new AppError(404, 'Usuario no encontrado');
     }
     await prisma.user.update({ where: { id }, data: { status: 'approved' } });
-    await renderDashboard(res, `Usuario ${user.email} aprobado correctamente`);
+    res.redirect('/admin?message=' + encodeURIComponent(`Usuario ${user.email} aprobado correctamente`));
   } catch (err) {
     next(err);
   }
@@ -412,7 +616,7 @@ export async function rejectUser(req: Request, res: Response, next: NextFunction
       throw new AppError(404, 'Usuario no encontrado');
     }
     await prisma.user.update({ where: { id }, data: { status: 'rejected' } });
-    await renderDashboard(res, `Usuario ${user.email} rechazado`);
+    res.redirect('/admin?message=' + encodeURIComponent(`Usuario ${user.email} rechazado`));
   } catch (err) {
     next(err);
   }
@@ -423,15 +627,15 @@ export async function createUser(req: Request, res: Response, next: NextFunction
     const { name, email, password } = req.body;
 
     if (!email || !password) {
-      return renderDashboard(res, undefined, 'Email y contraseña son requeridos');
+      return res.redirect('/admin?error=' + encodeURIComponent('Email y contraseña son requeridos'));
     }
     if (password.length < 4) {
-      return renderDashboard(res, undefined, 'La contraseña debe tener al menos 4 caracteres');
+      return res.redirect('/admin?error=' + encodeURIComponent('La contraseña debe tener al menos 4 caracteres'));
     }
 
     const existing = await prisma.user.findUnique({ where: { email } });
     if (existing) {
-      return renderDashboard(res, undefined, `El email ${email} ya está registrado`);
+      return res.redirect('/admin?error=' + encodeURIComponent(`El email ${email} ya está registrado`));
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -444,7 +648,7 @@ export async function createUser(req: Request, res: Response, next: NextFunction
       },
     });
 
-    await renderDashboard(res, `Usuario ${email} creado correctamente`);
+    res.redirect('/admin?message=' + encodeURIComponent(`Usuario ${email} creado correctamente`));
   } catch (err) {
     next(err);
   }
@@ -463,7 +667,7 @@ export async function editUser(req: Request, res: Response, next: NextFunction) 
     if (email && email !== user.email) {
       const existing = await prisma.user.findUnique({ where: { email } });
       if (existing) {
-        return renderDashboard(res, undefined, `El email ${email} ya está en uso`);
+        return res.redirect('/admin?error=' + encodeURIComponent(`El email ${email} ya está en uso`));
       }
     }
 
@@ -474,7 +678,7 @@ export async function editUser(req: Request, res: Response, next: NextFunction) 
 
     await prisma.user.update({ where: { id }, data });
 
-    await renderDashboard(res, `Usuario ${email || user.email} actualizado correctamente`);
+    res.redirect('/admin?message=' + encodeURIComponent(`Usuario ${email || user.email} actualizado correctamente`));
   } catch (err) {
     next(err);
   }
@@ -490,7 +694,117 @@ export async function deleteUser(req: Request, res: Response, next: NextFunction
 
     await prisma.user.delete({ where: { id } });
 
-    await renderDashboard(res, `Usuario ${user.email} eliminado correctamente`);
+    res.redirect('/admin?message=' + encodeURIComponent(`Usuario ${user.email} eliminado correctamente`));
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function getUserTemplates(req: Request, res: Response, next: NextFunction) {
+  try {
+    const userId = req.params.userId as string;
+    const config = await prisma.trainingConfig.findUnique({
+      where: { userId },
+      select: { templates: true },
+    });
+    res.json({ templates: config?.templates ?? {} });
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function uploadTemplate(req: Request, res: Response, next: NextFunction) {
+  try {
+    const userId = req.params.userId as string;
+    const { templateName, csvContent } = req.body;
+
+    if (!templateName || !csvContent) {
+      res.status(400).json({ error: 'templateName y csvContent son requeridos' });
+      return;
+    }
+
+    const lines = csvContent.split('\n').map((l: string) => l.trim()).filter(Boolean);
+    const exercises: { name: string; target: number; sets: number; unit: string; muscleGroup?: string }[] = [];
+    let headerSkipped = false;
+
+    for (const line of lines) {
+      if (!headerSkipped) {
+        const isHeader = /nombre/i.test(line) && /target/i.test(line);
+        if (isHeader) { headerSkipped = true; continue; }
+      }
+      headerSkipped = true;
+
+      const parts = line.split(',').map((p: string) => p.trim());
+      if (parts.length < 4) continue;
+
+      const name = parts[0];
+      const target = parseInt(parts[1], 10);
+      const sets = parseInt(parts[2], 10);
+      const unit = ['reps', 'km', 'min'].includes(parts[3]) ? parts[3] : 'reps';
+      const muscleGroup = parts[4]?.trim() || '';
+
+      if (name && !isNaN(target) && !isNaN(sets)) {
+        const exercise: any = { name, target, sets, unit: unit as 'reps' | 'km' | 'min' };
+        if (muscleGroup) exercise.muscleGroup = muscleGroup;
+        exercises.push(exercise);
+      }
+    }
+
+    if (exercises.length === 0) {
+      res.status(400).json({ error: 'No se pudieron parsear ejercicios del CSV' });
+      return;
+    }
+
+    const config = await prisma.trainingConfig.findUnique({ where: { userId } });
+    const currentTemplates = (config?.templates as Record<string, any[]>) || {};
+    const updatedTemplates = { ...currentTemplates, [templateName]: exercises };
+
+    await prisma.trainingConfig.upsert({
+      where: { userId },
+      create: {
+        userId,
+        intensity: 100,
+        endDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+        templates: updatedTemplates,
+      },
+      update: { templates: updatedTemplates },
+    });
+
+    res.json({ success: true, templates: updatedTemplates });
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function deleteTemplate(req: Request, res: Response, next: NextFunction) {
+  try {
+    const userId = req.params.userId as string;
+    const { templateName } = req.body;
+
+    if (!templateName) {
+      res.status(400).json({ error: 'templateName es requerido' });
+      return;
+    }
+
+    const config = await prisma.trainingConfig.findUnique({ where: { userId } });
+    const currentTemplates = (config?.templates as Record<string, any[]>) || {};
+
+    if (!currentTemplates[templateName]) {
+      res.status(404).json({ error: `Plantilla "${templateName}" no encontrada` });
+      return;
+    }
+
+    const updatedTemplates = { ...currentTemplates };
+    delete updatedTemplates[templateName];
+
+    if (config) {
+      await prisma.trainingConfig.update({
+        where: { userId },
+        data: { templates: updatedTemplates },
+      });
+    }
+
+    res.json({ success: true, templates: updatedTemplates });
   } catch (err) {
     next(err);
   }

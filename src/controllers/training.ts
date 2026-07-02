@@ -178,8 +178,8 @@ export async function updateTraining(
       where: { userId },
       create: {
         userId,
+        endDate: endDate ? new Date(endDate) : new Date(Date.now() + 90 * 86400000),
         ...(intensity !== undefined && { intensity }),
-        ...(endDate && { endDate: new Date(endDate) }),
         ...(schedule !== undefined && { schedule }),
         ...(templates !== undefined && { templates }),
         ...(completed !== undefined && { trainingCompleted: completed }),

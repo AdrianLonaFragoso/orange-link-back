@@ -8,6 +8,9 @@ import {
   createUser,
   editUser,
   deleteUser,
+  getUserTemplates,
+  uploadTemplate,
+  deleteTemplate,
 } from '../controllers/admin';
 
 const router = Router();
@@ -20,5 +23,8 @@ router.post('/reject/:id', rejectUser);
 router.post('/create', createUser);
 router.post('/edit/:id', editUser);
 router.post('/delete/:id', deleteUser);
+router.get('/templates/:userId/json', getUserTemplates);
+router.post('/templates/:userId', uploadTemplate);
+router.post('/templates/:userId/delete', deleteTemplate);
 
 export default router;
