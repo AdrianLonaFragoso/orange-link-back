@@ -17,6 +17,7 @@ const ADMIN_HTML = (users: any[], message?: string, error?: string) => `<!DOCTYP
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Orange Link — Admin</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -512,6 +513,7 @@ const LOGIN_HTML = (error?: string) => `<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Orange Link — Admin Login</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {

@@ -16,6 +16,12 @@ export async function getProfile(req: Request, res: Response, next: NextFunction
         name: user.name || 'Usuario',
         email: user.email,
         registrationDate: user.createdAt.toISOString(),
+        height: user.height,
+        weight: user.weight,
+        age: user.age,
+        sex: user.sex,
+        activityLevel: user.activityLevel,
+        avatarUrl: user.avatarUrl,
       },
     });
   } catch (err) {
@@ -26,11 +32,17 @@ export async function getProfile(req: Request, res: Response, next: NextFunction
 export async function updateProfile(req: Request, res: Response, next: NextFunction) {
   try {
     const userId = req.authUser!.userId;
-    const { name, email } = req.body;
+    const { name, email, height, weight, age, sex, activityLevel, avatarUrl } = req.body;
 
-    const data: { name?: string; email?: string } = {};
+    const data: Record<string, any> = {};
     if (name !== undefined) data.name = name;
     if (email !== undefined) data.email = email;
+    if (height !== undefined) data.height = height;
+    if (weight !== undefined) data.weight = weight;
+    if (age !== undefined) data.age = age;
+    if (sex !== undefined) data.sex = sex;
+    if (activityLevel !== undefined) data.activityLevel = activityLevel;
+    if (avatarUrl !== undefined) data.avatarUrl = avatarUrl;
 
     const user = await prisma.user.update({
       where: { id: userId },
@@ -42,6 +54,12 @@ export async function updateProfile(req: Request, res: Response, next: NextFunct
         name: user.name || 'Usuario',
         email: user.email,
         registrationDate: user.createdAt.toISOString(),
+        height: user.height,
+        weight: user.weight,
+        age: user.age,
+        sex: user.sex,
+        activityLevel: user.activityLevel,
+        avatarUrl: user.avatarUrl,
       },
     });
   } catch (err) {

@@ -16,6 +16,11 @@ model User {
   status       String   @default("pending")
   avatarUrl    String?  @map("avatar_url")
   googleId     String?  @unique @map("google_id")
+  height       Float?   // cm
+  weight       Float?   // kg (peso actual)
+  age          Int?
+  sex          String?  // "male" | "female"
+  activityLevel Float?  @map("activity_level") // 1.2 | 1.5 | 1.8 | 2.2
   createdAt    DateTime @default(now()) @map("created_at")
   updatedAt    DateTime @updatedAt @map("updated_at")
 
@@ -36,7 +41,7 @@ model DailyLog {
   userId           String   @map("user_id")
   date             DateTime @db.Date
   waterIntake      Float    @default(0) @map("water_intake")
-  waterGoal        Float    @default(4) @map("water_goal")
+  waterGoal        Float    @default(0) @map("water_goal")
   dailyMissions    Json     @default("{}") @map("daily_missions")
   trainingMissions Json     @default("{}") @map("training_missions")
   supplementsTaken Json     @default("{}") @map("supplements_taken")

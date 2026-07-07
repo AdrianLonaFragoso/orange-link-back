@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
+import path from 'path';
 import { errorHandler } from './middleware/errorHandler';
 import { seedPlans } from './controllers/nutrition';
 
@@ -41,6 +42,10 @@ app.use('/api/v1/calculators', calculatorsRoutes);
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/admin', adminRoutes);
+
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(path.join(process.cwd(), 'public', 'favicon.ico'));
+});
 
 app.use(errorHandler);
 
