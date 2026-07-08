@@ -36,7 +36,6 @@ export async function updateProfile(req: Request, res: Response, next: NextFunct
 
     const data: Record<string, any> = {};
     if (name !== undefined) data.name = name;
-    if (email !== undefined) data.email = email;
     if (height !== undefined) data.height = height;
     if (weight !== undefined) data.weight = weight;
     if (age !== undefined) data.age = age;

@@ -18,7 +18,7 @@ function generateRefreshToken(userId: string): string {
 
 export async function register(req: Request, res: Response, next: NextFunction) {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password, height, weight, age, sex, activityLevel, avatarUrl } = req.body;
 
     if (!email || !password) {
       throw new AppError(400, 'Email y contraseña son requeridos');
@@ -40,6 +40,12 @@ export async function register(req: Request, res: Response, next: NextFunction) 
         name: name || email.split('@')[0],
         password: hashedPassword,
         status: 'pending',
+        ...(height !== undefined && { height }),
+        ...(weight !== undefined && { weight }),
+        ...(age !== undefined && { age }),
+        ...(sex !== undefined && { sex }),
+        ...(activityLevel !== undefined && { activityLevel }),
+        ...(avatarUrl !== undefined && { avatarUrl }),
       },
     });
 
@@ -166,6 +172,12 @@ export async function me(req: Request, res: Response, next: NextFunction) {
         name: user.name,
         email: user.email,
         registrationDate: user.createdAt.toISOString(),
+        height: user.height,
+        weight: user.weight,
+        age: user.age,
+        sex: user.sex,
+        activityLevel: user.activityLevel,
+        avatarUrl: user.avatarUrl,
       },
     });
   } catch (err) {
