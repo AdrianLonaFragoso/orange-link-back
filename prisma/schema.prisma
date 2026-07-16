@@ -127,6 +127,9 @@ model NutritionPlan {
   id          String   @id @default(uuid())
   name        String   @unique
   description String?
+  portions    Int      @default(0)
+  proteinG    Float?   @map("protein_grams")
+  veggieG     Float?   @map("veggie_grams")
   createdAt   DateTime @default(now()) @map("created_at")
 
   users UserNutritionPlan[]
@@ -137,6 +140,9 @@ model UserNutritionPlan {
   userId          String   @map("user_id")
   nutritionPlanId String   @map("nutrition_plan_id")
   selectedAt      DateTime @default(now()) @map("selected_at")
+  startDate       DateTime? @map("start_date")
+  endDate         DateTime? @map("end_date")
+  durationType    String?  @map("duration_type")
 
   user User          @relation(fields: [userId], references: [id], onDelete: Cascade)
   plan NutritionPlan @relation(fields: [nutritionPlanId], references: [id], onDelete: Cascade)

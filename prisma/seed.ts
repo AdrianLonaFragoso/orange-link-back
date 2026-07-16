@@ -65,7 +65,24 @@ const defaultTemplates: Record<string, any[]> = {
   ],
 };
 
+const NUTRITION_TEMPLATES = [
+  { name: 'Keto Full', portions: 0, proteinG: 150, veggieG: 400, description: 'Dieta cetogénica estricta, 0 porciones de carbohidratos' },
+  { name: 'Low Carb', portions: 2, proteinG: 130, veggieG: 350, description: 'Baja en carbohidratos, 2 porciones al día' },
+  { name: 'Mid Carb', portions: 6, proteinG: 120, veggieG: 300, description: 'Carbohidratos moderados, 6 porciones al día' },
+  { name: 'Balance Carb', portions: 12, proteinG: 100, veggieG: 250, description: 'Dieta balanceada, 12 porciones de carbohidratos al día' },
+];
+
 async function main() {
+  // Seed nutrition plan templates
+  for (const template of NUTRITION_TEMPLATES) {
+    await prisma.nutritionPlan.upsert({
+      where: { name: template.name },
+      create: template,
+      update: {},
+    });
+  }
+  console.log(`Seeded ${NUTRITION_TEMPLATES.length} nutrition plan templates`);
+
   const user = await prisma.user.findFirst();
 
   if (!user) {

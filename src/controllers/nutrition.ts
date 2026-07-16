@@ -2,16 +2,15 @@ import { Request, Response, NextFunction } from 'express';
 import prisma from '../lib/prisma';
 import { AppError } from '../middleware/errorHandler';
 
-const DEFAULT_PLANS = [
-  { name: 'Keto Full', description: 'Dieta cetogénica estricta, alta en grasas y baja en carbohidratos' },
-  { name: 'Carnívora', description: 'Solo alimentos de origen animal' },
-  { name: 'Low Carb', description: 'Baja en carbohidratos, moderada en proteínas y grasas' },
-  { name: 'OMAD', description: 'One Meal A Day - una sola comida al día' },
-  { name: 'Cetogénica 2.0', description: 'Versión moderna de la dieta keto con más flexibilidad' },
+const NUTRITION_TEMPLATES = [
+  { name: 'Keto Full', portions: 0, proteinG: 150, veggieG: 400, description: 'Dieta cetogénica estricta, 0 porciones de carbohidratos' },
+  { name: 'Low Carb', portions: 2, proteinG: 130, veggieG: 350, description: 'Baja en carbohidratos, 2 porciones al día' },
+  { name: 'Mid Carb', portions: 6, proteinG: 120, veggieG: 300, description: 'Carbohidratos moderados, 6 porciones al día' },
+  { name: 'Balance Carb', portions: 12, proteinG: 100, veggieG: 250, description: 'Dieta balanceada, 12 porciones de carbohidratos al día' },
 ];
 
 export async function seedPlans() {
-  for (const plan of DEFAULT_PLANS) {
+  for (const plan of NUTRITION_TEMPLATES) {
     await prisma.nutritionPlan.upsert({
       where: { name: plan.name },
       create: plan,
@@ -49,6 +48,12 @@ export async function getCurrentNutrition(req: Request, res: Response, next: Nex
 
     res.json({
       nutritionPlan: userPlan?.plan.name || null,
+      portions: userPlan?.plan.portions || 0,
+      proteinG: userPlan?.plan.proteinG || null,
+      veggieG: userPlan?.plan.veggieG || null,
+      startDate: userPlan?.startDate?.toISOString() || null,
+      endDate: userPlan?.endDate?.toISOString() || null,
+      durationType: userPlan?.durationType || null,
       selectedMeals: dailyLog.selectedMeals,
     });
   } catch (err) {
@@ -59,7 +64,7 @@ export async function getCurrentNutrition(req: Request, res: Response, next: Nex
 export async function updateNutritionPlan(req: Request, res: Response, next: NextFunction) {
   try {
     const userId = req.authUser!.userId;
-    const { planName } = req.body;
+    const { planName, startDate, endDate, durationType } = req.body;
 
     if (!planName || typeof planName !== 'string') {
       throw new AppError(400, 'planName is required');
@@ -70,13 +75,35 @@ export async function updateNutritionPlan(req: Request, res: Response, next: Nex
       throw new AppError(404, `Plan "${planName}" not found`);
     }
 
+    const start = startDate ? new Date(startDate) : undefined;
+    const end = endDate ? new Date(endDate) : undefined;
+
     await prisma.userNutritionPlan.upsert({
       where: { userId_nutritionPlanId: { userId, nutritionPlanId: plan.id } },
-      create: { userId, nutritionPlanId: plan.id },
-      update: { selectedAt: new Date() },
+      create: {
+        userId,
+        nutritionPlanId: plan.id,
+        startDate: start,
+        endDate: end,
+        durationType: durationType || null,
+      },
+      update: {
+        selectedAt: new Date(),
+        startDate: start,
+        endDate: end,
+        durationType: durationType || null,
+      },
     });
 
-    res.json({ nutritionPlan: plan.name });
+    res.json({
+      nutritionPlan: plan.name,
+      portions: plan.portions,
+      proteinG: plan.proteinG,
+      veggieG: plan.veggieG,
+      startDate: start?.toISOString() || null,
+      endDate: end?.toISOString() || null,
+      durationType: durationType || null,
+    });
   } catch (err) {
     next(err);
   }
