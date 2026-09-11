@@ -11,6 +11,7 @@ import {
   getUserTemplates,
   uploadTemplate,
   deleteTemplate,
+  assignTemplate,
 } from '../controllers/admin';
 
 const router = Router();
@@ -26,5 +27,6 @@ router.post('/delete/:id', deleteUser);
 router.get('/templates/:userId/json', getUserTemplates);
 router.post('/templates/:userId', uploadTemplate);
 router.post('/templates/:userId/delete', deleteTemplate);
+router.post('/assign/:userId', assignTemplate);
 
 export default router;

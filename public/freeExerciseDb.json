@@ -1,0 +1,2502 @@
+[
+  {
+    "id": "3_4_Sit-Up",
+    "name": "3/4 Sit-Up",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/3_4_Sit-Up/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/3_4_Sit-Up/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Ab_Roller",
+    "name": "Ab Roller",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Ab_Roller/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Ab_Roller/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Air_Bike",
+    "name": "Air Bike",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Air_Bike/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Air_Bike/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Alternate_Hammer_Curl",
+    "name": "Alternate Hammer Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Alternate_Hammer_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Alternate_Hammer_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Alternate_Heel_Touchers",
+    "name": "Alternate Heel Touchers",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Alternate_Heel_Touchers/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Alternate_Heel_Touchers/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Alternating_Kettlebell_Press",
+    "name": "Alternating Kettlebell Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Alternating_Kettlebell_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Alternating_Kettlebell_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Alternating_Kettlebell_Row",
+    "name": "Alternating Kettlebell Row",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Alternating_Kettlebell_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Alternating_Kettlebell_Row/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Anti-Gravity_Press",
+    "name": "Anti-Gravity Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Anti-Gravity_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Anti-Gravity_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Arnold_Dumbbell_Press",
+    "name": "Arnold Dumbbell Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Arnold_Dumbbell_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Arnold_Dumbbell_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Around_The_Worlds",
+    "name": "Around The Worlds",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Around_The_Worlds/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Around_The_Worlds/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Balance_Board",
+    "name": "Balance Board",
+    "bodyPart": "Legs",
+    "target": "Calves",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Balance_Board/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Balance_Board/1.jpg",
+    "muscleGroup": "Pantorrillas"
+  },
+  {
+    "id": "Band_Hip_Adductions",
+    "name": "Band Hip Adductions",
+    "bodyPart": "Legs",
+    "target": "Adductors",
+    "equipment": "Bands",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Band_Hip_Adductions/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Band_Hip_Adductions/1.jpg",
+    "muscleGroup": "Aductores"
+  },
+  {
+    "id": "Barbell_Curl",
+    "name": "Barbell Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Barbell_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Barbell_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Barbell_Deadlift",
+    "name": "Barbell Deadlift",
+    "bodyPart": "Back",
+    "target": "Lower back",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Barbell_Deadlift/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Barbell_Deadlift/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Barbell_Hack_Squat",
+    "name": "Barbell Hack Squat",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Barbell_Hack_Squat/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Barbell_Hack_Squat/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Barbell_Incline_Bench_Press_-_Medium_Grip",
+    "name": "Barbell Incline Bench Press - Medium Grip",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Barbell_Incline_Bench_Press_-_Medium_Grip/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Barbell_Incline_Bench_Press_-_Medium_Grip/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Barbell_Rear_Delt_Row",
+    "name": "Barbell Rear Delt Row",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Barbell_Rear_Delt_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Barbell_Rear_Delt_Row/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Barbell_Rollout_from_Bench",
+    "name": "Barbell Rollout from Bench",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Barbell_Rollout_from_Bench/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Barbell_Rollout_from_Bench/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Barbell_Seated_Calf_Raise",
+    "name": "Barbell Seated Calf Raise",
+    "bodyPart": "Legs",
+    "target": "Calves",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Barbell_Seated_Calf_Raise/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Barbell_Seated_Calf_Raise/1.jpg",
+    "muscleGroup": "Pantorrillas"
+  },
+  {
+    "id": "Barbell_Shrug",
+    "name": "Barbell Shrug",
+    "bodyPart": "Shoulders",
+    "target": "Traps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Barbell_Shrug/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Barbell_Shrug/1.jpg",
+    "muscleGroup": "Traps"
+  },
+  {
+    "id": "Barbell_Side_Bend",
+    "name": "Barbell Side Bend",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Barbell_Side_Bend/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Barbell_Side_Bend/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Barbell_Squat",
+    "name": "Barbell Squat",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Barbell_Squat/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Barbell_Squat/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Battling_Ropes",
+    "name": "Battling Ropes",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Battling_Ropes/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Battling_Ropes/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Bench_Dips",
+    "name": "Bench Dips",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Bench_Dips/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Bench_Dips/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Bench_Press_-_With_Bands",
+    "name": "Bench Press - With Bands",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Bands",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Bench_Press_-_With_Bands/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Bench_Press_-_With_Bands/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Bent_Over_Low-Pulley_Side_Lateral",
+    "name": "Bent Over Low-Pulley Side Lateral",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Bent_Over_Low-Pulley_Side_Lateral/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Bent_Over_Low-Pulley_Side_Lateral/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Bent_Over_One-Arm_Long_Bar_Row",
+    "name": "Bent Over One-Arm Long Bar Row",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Bent_Over_One-Arm_Long_Bar_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Bent_Over_One-Arm_Long_Bar_Row/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Bent-Arm_Barbell_Pullover",
+    "name": "Bent-Arm Barbell Pullover",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Bent-Arm_Barbell_Pullover/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Bent-Arm_Barbell_Pullover/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Bent-Arm_Dumbbell_Pullover",
+    "name": "Bent-Arm Dumbbell Pullover",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Bent-Arm_Dumbbell_Pullover/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Bent-Arm_Dumbbell_Pullover/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Body_Tricep_Press",
+    "name": "Body Tricep Press",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Body_Tricep_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Body_Tricep_Press/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Bodyweight_Flyes",
+    "name": "Bodyweight Flyes",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "E-z curl bar",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Bodyweight_Flyes/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Bodyweight_Flyes/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Bodyweight_Mid_Row",
+    "name": "Bodyweight Mid Row",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Bodyweight_Mid_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Bodyweight_Mid_Row/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Bosu_Ball_Cable_Crunch_With_Side_Bends",
+    "name": "Bosu Ball Cable Crunch With Side Bends",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Bosu_Ball_Cable_Crunch_With_Side_Bends/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Bosu_Ball_Cable_Crunch_With_Side_Bends/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Bradford_Rocky_Presses",
+    "name": "Bradford/Rocky Presses",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Bradford_Rocky_Presses/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Bradford_Rocky_Presses/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Cable_Crunch",
+    "name": "Cable Crunch",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cable_Crunch/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cable_Crunch/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Cable_Deadlifts",
+    "name": "Cable Deadlifts",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cable_Deadlifts/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cable_Deadlifts/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Cable_Incline_Triceps_Extension",
+    "name": "Cable Incline Triceps Extension",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cable_Incline_Triceps_Extension/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cable_Incline_Triceps_Extension/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Cable_Iron_Cross",
+    "name": "Cable Iron Cross",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cable_Iron_Cross/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cable_Iron_Cross/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Cable_Lying_Triceps_Extension",
+    "name": "Cable Lying Triceps Extension",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cable_Lying_Triceps_Extension/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cable_Lying_Triceps_Extension/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Cable_One_Arm_Tricep_Extension",
+    "name": "Cable One Arm Tricep Extension",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cable_One_Arm_Tricep_Extension/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cable_One_Arm_Tricep_Extension/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Cable_Rear_Delt_Fly",
+    "name": "Cable Rear Delt Fly",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cable_Rear_Delt_Fly/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cable_Rear_Delt_Fly/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Cable_Rope_Rear-Delt_Rows",
+    "name": "Cable Rope Rear-Delt Rows",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cable_Rope_Rear-Delt_Rows/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cable_Rope_Rear-Delt_Rows/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Cable_Russian_Twists",
+    "name": "Cable Russian Twists",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cable_Russian_Twists/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cable_Russian_Twists/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Cable_Seated_Crunch",
+    "name": "Cable Seated Crunch",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cable_Seated_Crunch/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cable_Seated_Crunch/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Cable_Seated_Lateral_Raise",
+    "name": "Cable Seated Lateral Raise",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cable_Seated_Lateral_Raise/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cable_Seated_Lateral_Raise/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Cable_Shrugs",
+    "name": "Cable Shrugs",
+    "bodyPart": "Shoulders",
+    "target": "Traps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cable_Shrugs/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cable_Shrugs/1.jpg",
+    "muscleGroup": "Traps"
+  },
+  {
+    "id": "Calf_Press",
+    "name": "Calf Press",
+    "bodyPart": "Legs",
+    "target": "Calves",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Calf_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Calf_Press/1.jpg",
+    "muscleGroup": "Pantorrillas"
+  },
+  {
+    "id": "Calf_Raises_-_With_Bands",
+    "name": "Calf Raises - With Bands",
+    "bodyPart": "Legs",
+    "target": "Calves",
+    "equipment": "Bands",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Calf_Raises_-_With_Bands/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Calf_Raises_-_With_Bands/1.jpg",
+    "muscleGroup": "Pantorrillas"
+  },
+  {
+    "id": "Chin-Up",
+    "name": "Chin-Up",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Chin-Up/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Chin-Up/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Close-Grip_Barbell_Bench_Press",
+    "name": "Close-Grip Barbell Bench Press",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Close-Grip_Barbell_Bench_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Close-Grip_Barbell_Bench_Press/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Close-Grip_EZ_Bar_Curl",
+    "name": "Close-Grip EZ Bar Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Close-Grip_EZ_Bar_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Close-Grip_EZ_Bar_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Close-Grip_EZ-Bar_Curl_with_Band",
+    "name": "Close-Grip EZ-Bar Curl with Band",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "E-z curl bar",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Close-Grip_EZ-Bar_Curl_with_Band/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Close-Grip_EZ-Bar_Curl_with_Band/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Close-Grip_Front_Lat_Pulldown",
+    "name": "Close-Grip Front Lat Pulldown",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Close-Grip_Front_Lat_Pulldown/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Close-Grip_Front_Lat_Pulldown/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Close-Grip_Standing_Barbell_Curl",
+    "name": "Close-Grip Standing Barbell Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Close-Grip_Standing_Barbell_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Close-Grip_Standing_Barbell_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Concentration_Curls",
+    "name": "Concentration Curls",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Concentration_Curls/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Concentration_Curls/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Cross_Over_-_With_Bands",
+    "name": "Cross Over - With Bands",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Bands",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cross_Over_-_With_Bands/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cross_Over_-_With_Bands/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Crunches",
+    "name": "Crunches",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Crunches/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Crunches/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Cuban_Press",
+    "name": "Cuban Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Cuban_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Cuban_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Decline_EZ_Bar_Triceps_Extension",
+    "name": "Decline EZ Bar Triceps Extension",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Decline_EZ_Bar_Triceps_Extension/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Decline_EZ_Bar_Triceps_Extension/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Decline_Oblique_Crunch",
+    "name": "Decline Oblique Crunch",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Decline_Oblique_Crunch/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Decline_Oblique_Crunch/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Decline_Smith_Press",
+    "name": "Decline Smith Press",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Decline_Smith_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Decline_Smith_Press/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Dip_Machine",
+    "name": "Dip Machine",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dip_Machine/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dip_Machine/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Dumbbell_Bench_Press",
+    "name": "Dumbbell Bench Press",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dumbbell_Bench_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dumbbell_Bench_Press/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Dumbbell_Incline_Row",
+    "name": "Dumbbell Incline Row",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dumbbell_Incline_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dumbbell_Incline_Row/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Dumbbell_Incline_Shoulder_Raise",
+    "name": "Dumbbell Incline Shoulder Raise",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dumbbell_Incline_Shoulder_Raise/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dumbbell_Incline_Shoulder_Raise/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Dumbbell_Lunges",
+    "name": "Dumbbell Lunges",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dumbbell_Lunges/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dumbbell_Lunges/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Dumbbell_Lying_Supination",
+    "name": "Dumbbell Lying Supination",
+    "bodyPart": "Arms",
+    "target": "Forearms",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dumbbell_Lying_Supination/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dumbbell_Lying_Supination/1.jpg",
+    "muscleGroup": "Antebrazo"
+  },
+  {
+    "id": "Dumbbell_One-Arm_Triceps_Extension",
+    "name": "Dumbbell One-Arm Triceps Extension",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dumbbell_One-Arm_Triceps_Extension/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dumbbell_One-Arm_Triceps_Extension/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Dumbbell_One-Arm_Upright_Row",
+    "name": "Dumbbell One-Arm Upright Row",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dumbbell_One-Arm_Upright_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dumbbell_One-Arm_Upright_Row/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Dumbbell_Prone_Incline_Curl",
+    "name": "Dumbbell Prone Incline Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dumbbell_Prone_Incline_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dumbbell_Prone_Incline_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Dumbbell_Scaption",
+    "name": "Dumbbell Scaption",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dumbbell_Scaption/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dumbbell_Scaption/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Dumbbell_Shoulder_Press",
+    "name": "Dumbbell Shoulder Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dumbbell_Shoulder_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dumbbell_Shoulder_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Dumbbell_Squat",
+    "name": "Dumbbell Squat",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dumbbell_Squat/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dumbbell_Squat/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Dumbbell_Tricep_Extension_-Pronated_Grip",
+    "name": "Dumbbell Tricep Extension -Pronated Grip",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Dumbbell_Tricep_Extension_-Pronated_Grip/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Dumbbell_Tricep_Extension_-Pronated_Grip/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "EZ-Bar_Curl",
+    "name": "EZ-Bar Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "E-z curl bar",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/EZ-Bar_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/EZ-Bar_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Finger_Curls",
+    "name": "Finger Curls",
+    "bodyPart": "Arms",
+    "target": "Forearms",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Finger_Curls/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Finger_Curls/1.jpg",
+    "muscleGroup": "Antebrazo"
+  },
+  {
+    "id": "Flat_Bench_Leg_Pull-In",
+    "name": "Flat Bench Leg Pull-In",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Flat_Bench_Leg_Pull-In/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Flat_Bench_Leg_Pull-In/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Flexor_Incline_Dumbbell_Curls",
+    "name": "Flexor Incline Dumbbell Curls",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Flexor_Incline_Dumbbell_Curls/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Flexor_Incline_Dumbbell_Curls/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Floor_Glute-Ham_Raise",
+    "name": "Floor Glute-Ham Raise",
+    "bodyPart": "Legs",
+    "target": "Hamstrings",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Floor_Glute-Ham_Raise/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Floor_Glute-Ham_Raise/1.jpg",
+    "muscleGroup": "Isquiotibiales"
+  },
+  {
+    "id": "Flutter_Kicks",
+    "name": "Flutter Kicks",
+    "bodyPart": "Legs",
+    "target": "Glutes",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Flutter_Kicks/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Flutter_Kicks/1.jpg",
+    "muscleGroup": "Glutes"
+  },
+  {
+    "id": "Freehand_Jump_Squat",
+    "name": "Freehand Jump Squat",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Freehand_Jump_Squat/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Freehand_Jump_Squat/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Front_Barbell_Squat",
+    "name": "Front Barbell Squat",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Front_Barbell_Squat/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Front_Barbell_Squat/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Front_Cable_Raise",
+    "name": "Front Cable Raise",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Front_Cable_Raise/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Front_Cable_Raise/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Front_Incline_Dumbbell_Raise",
+    "name": "Front Incline Dumbbell Raise",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Front_Incline_Dumbbell_Raise/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Front_Incline_Dumbbell_Raise/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Front_Squat_Clean_Grip",
+    "name": "Front Squat (Clean Grip)",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Front_Squat_Clean_Grip/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Front_Squat_Clean_Grip/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Front_Squats_With_Two_Kettlebells",
+    "name": "Front Squats With Two Kettlebells",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Front_Squats_With_Two_Kettlebells/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Front_Squats_With_Two_Kettlebells/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Full_Range-Of-Motion_Lat_Pulldown",
+    "name": "Full Range-Of-Motion Lat Pulldown",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Full_Range-Of-Motion_Lat_Pulldown/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Full_Range-Of-Motion_Lat_Pulldown/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Gironda_Sternum_Chins",
+    "name": "Gironda Sternum Chins",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Gironda_Sternum_Chins/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Gironda_Sternum_Chins/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Glute_Kickback",
+    "name": "Glute Kickback",
+    "bodyPart": "Legs",
+    "target": "Glutes",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Glute_Kickback/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Glute_Kickback/1.jpg",
+    "muscleGroup": "Glutes"
+  },
+  {
+    "id": "Hanging_Pike",
+    "name": "Hanging Pike",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Hanging_Pike/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Hanging_Pike/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Hyperextensions_With_No_Hyperextension_Bench",
+    "name": "Hyperextensions With No Hyperextension Bench",
+    "bodyPart": "Back",
+    "target": "Lower back",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Hyperextensions_With_No_Hyperextension_Bench/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Hyperextensions_With_No_Hyperextension_Bench/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Incline_Dumbbell_Flyes_-_With_A_Twist",
+    "name": "Incline Dumbbell Flyes - With A Twist",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Incline_Dumbbell_Flyes_-_With_A_Twist/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Incline_Dumbbell_Flyes_-_With_A_Twist/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Incline_Push-Up",
+    "name": "Incline Push-Up",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Incline_Push-Up/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Incline_Push-Up/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Incline_Push-Up_Close-Grip",
+    "name": "Incline Push-Up Close-Grip",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Incline_Push-Up_Close-Grip/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Incline_Push-Up_Close-Grip/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Incline_Push-Up_Reverse_Grip",
+    "name": "Incline Push-Up Reverse Grip",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Incline_Push-Up_Reverse_Grip/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Incline_Push-Up_Reverse_Grip/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Incline_Push-Up_Wide",
+    "name": "Incline Push-Up Wide",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Incline_Push-Up_Wide/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Incline_Push-Up_Wide/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Inverted_Row_with_Straps",
+    "name": "Inverted Row with Straps",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Inverted_Row_with_Straps/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Inverted_Row_with_Straps/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Janda_Sit-Up",
+    "name": "Janda Sit-Up",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Janda_Sit-Up/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Janda_Sit-Up/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Jefferson_Squats",
+    "name": "Jefferson Squats",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Jefferson_Squats/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Jefferson_Squats/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Kettlebell_Figure_8",
+    "name": "Kettlebell Figure 8",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Kettlebell_Figure_8/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Kettlebell_Figure_8/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Kettlebell_Pistol_Squat",
+    "name": "Kettlebell Pistol Squat",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Kettlebell_Pistol_Squat/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Kettlebell_Pistol_Squat/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Kettlebell_Turkish_Get-Up_Lunge_style",
+    "name": "Kettlebell Turkish Get-Up (Lunge style)",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Kettlebell_Turkish_Get-Up_Lunge_style/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Kettlebell_Turkish_Get-Up_Lunge_style/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Kettlebell_Turkish_Get-Up_Squat_style",
+    "name": "Kettlebell Turkish Get-Up (Squat style)",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Kettlebell_Turkish_Get-Up_Squat_style/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Kettlebell_Turkish_Get-Up_Squat_style/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Kipping_Muscle_Up",
+    "name": "Kipping Muscle Up",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Kipping_Muscle_Up/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Kipping_Muscle_Up/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Knee_Hip_Raise_On_Parallel_Bars",
+    "name": "Knee/Hip Raise On Parallel Bars",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Knee_Hip_Raise_On_Parallel_Bars/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Knee_Hip_Raise_On_Parallel_Bars/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Kneeling_High_Pulley_Row",
+    "name": "Kneeling High Pulley Row",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Kneeling_High_Pulley_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Kneeling_High_Pulley_Row/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Lateral_Raise_-_With_Bands",
+    "name": "Lateral Raise - With Bands",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Bands",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Lateral_Raise_-_With_Bands/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Lateral_Raise_-_With_Bands/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Leg_Extensions",
+    "name": "Leg Extensions",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Leg_Extensions/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Leg_Extensions/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Leg_Press",
+    "name": "Leg Press",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Leg_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Leg_Press/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Leg_Pull-In",
+    "name": "Leg Pull-In",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Leg_Pull-In/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Leg_Pull-In/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Leverage_Deadlift",
+    "name": "Leverage Deadlift",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Leverage_Deadlift/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Leverage_Deadlift/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Leverage_Decline_Chest_Press",
+    "name": "Leverage Decline Chest Press",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Leverage_Decline_Chest_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Leverage_Decline_Chest_Press/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Leverage_Incline_Chest_Press",
+    "name": "Leverage Incline Chest Press",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Leverage_Incline_Chest_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Leverage_Incline_Chest_Press/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Leverage_Iso_Row",
+    "name": "Leverage Iso Row",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Leverage_Iso_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Leverage_Iso_Row/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Leverage_Shrug",
+    "name": "Leverage Shrug",
+    "bodyPart": "Shoulders",
+    "target": "Traps",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Leverage_Shrug/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Leverage_Shrug/1.jpg",
+    "muscleGroup": "Traps"
+  },
+  {
+    "id": "London_Bridges",
+    "name": "London Bridges",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/London_Bridges/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/London_Bridges/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Low_Cable_Crossover",
+    "name": "Low Cable Crossover",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Low_Cable_Crossover/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Low_Cable_Crossover/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Low_Pulley_Row_To_Neck",
+    "name": "Low Pulley Row To Neck",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Low_Pulley_Row_To_Neck/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Low_Pulley_Row_To_Neck/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Lunge_Pass_Through",
+    "name": "Lunge Pass Through",
+    "bodyPart": "Legs",
+    "target": "Hamstrings",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Lunge_Pass_Through/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Lunge_Pass_Through/1.jpg",
+    "muscleGroup": "Isquiotibiales"
+  },
+  {
+    "id": "Lying_Cambered_Barbell_Row",
+    "name": "Lying Cambered Barbell Row",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Lying_Cambered_Barbell_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Lying_Cambered_Barbell_Row/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Lying_Close-Grip_Barbell_Triceps_Press_To_Chin",
+    "name": "Lying Close-Grip Barbell Triceps Press To Chin",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "E-z curl bar",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Lying_Close-Grip_Barbell_Triceps_Press_To_Chin/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Lying_Close-Grip_Barbell_Triceps_Press_To_Chin/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Lying_High_Bench_Barbell_Curl",
+    "name": "Lying High Bench Barbell Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Lying_High_Bench_Barbell_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Lying_High_Bench_Barbell_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Lying_Machine_Squat",
+    "name": "Lying Machine Squat",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Lying_Machine_Squat/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Lying_Machine_Squat/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Lying_Rear_Delt_Raise",
+    "name": "Lying Rear Delt Raise",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Lying_Rear_Delt_Raise/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Lying_Rear_Delt_Raise/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Lying_Triceps_Press",
+    "name": "Lying Triceps Press",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "E-z curl bar",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Lying_Triceps_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Lying_Triceps_Press/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Machine_Bench_Press",
+    "name": "Machine Bench Press",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Machine_Bench_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Machine_Bench_Press/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Machine_Bicep_Curl",
+    "name": "Machine Bicep Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Machine_Bicep_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Machine_Bicep_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Machine_Shoulder_Military_Press",
+    "name": "Machine Shoulder (Military) Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Machine_Shoulder_Military_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Machine_Shoulder_Military_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Mixed_Grip_Chin",
+    "name": "Mixed Grip Chin",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Mixed_Grip_Chin/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Mixed_Grip_Chin/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Muscle_Up",
+    "name": "Muscle Up",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Muscle_Up/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Muscle_Up/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Narrow_Stance_Leg_Press",
+    "name": "Narrow Stance Leg Press",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Narrow_Stance_Leg_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Narrow_Stance_Leg_Press/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Oblique_Crunches_-_On_The_Floor",
+    "name": "Oblique Crunches - On The Floor",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Oblique_Crunches_-_On_The_Floor/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Oblique_Crunches_-_On_The_Floor/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "One_Arm_Dumbbell_Bench_Press",
+    "name": "One Arm Dumbbell Bench Press",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One_Arm_Dumbbell_Bench_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One_Arm_Dumbbell_Bench_Press/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "One_Arm_Supinated_Dumbbell_Triceps_Extension",
+    "name": "One Arm Supinated Dumbbell Triceps Extension",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One_Arm_Supinated_Dumbbell_Triceps_Extension/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One_Arm_Supinated_Dumbbell_Triceps_Extension/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "One_Leg_Barbell_Squat",
+    "name": "One Leg Barbell Squat",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One_Leg_Barbell_Squat/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One_Leg_Barbell_Squat/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "One-Arm_Dumbbell_Row",
+    "name": "One-Arm Dumbbell Row",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One-Arm_Dumbbell_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One-Arm_Dumbbell_Row/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "One-Arm_Flat_Bench_Dumbbell_Flye",
+    "name": "One-Arm Flat Bench Dumbbell Flye",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One-Arm_Flat_Bench_Dumbbell_Flye/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One-Arm_Flat_Bench_Dumbbell_Flye/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "One-Arm_Kettlebell_Military_Press_To_The_Side",
+    "name": "One-Arm Kettlebell Military Press To The Side",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One-Arm_Kettlebell_Military_Press_To_The_Side/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One-Arm_Kettlebell_Military_Press_To_The_Side/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "One-Arm_Kettlebell_Para_Press",
+    "name": "One-Arm Kettlebell Para Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One-Arm_Kettlebell_Para_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One-Arm_Kettlebell_Para_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "One-Arm_Kettlebell_Push_Press",
+    "name": "One-Arm Kettlebell Push Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One-Arm_Kettlebell_Push_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One-Arm_Kettlebell_Push_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "One-Arm_Kettlebell_Row",
+    "name": "One-Arm Kettlebell Row",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One-Arm_Kettlebell_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One-Arm_Kettlebell_Row/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "One-Arm_Open_Palm_Kettlebell_Clean",
+    "name": "One-Arm Open Palm Kettlebell Clean",
+    "bodyPart": "Legs",
+    "target": "Hamstrings",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One-Arm_Open_Palm_Kettlebell_Clean/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One-Arm_Open_Palm_Kettlebell_Clean/1.jpg",
+    "muscleGroup": "Isquiotibiales"
+  },
+  {
+    "id": "One-Arm_Overhead_Kettlebell_Squats",
+    "name": "One-Arm Overhead Kettlebell Squats",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One-Arm_Overhead_Kettlebell_Squats/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One-Arm_Overhead_Kettlebell_Squats/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "One-Arm_Side_Deadlift",
+    "name": "One-Arm Side Deadlift",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One-Arm_Side_Deadlift/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One-Arm_Side_Deadlift/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "One-Arm_Side_Laterals",
+    "name": "One-Arm Side Laterals",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/One-Arm_Side_Laterals/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/One-Arm_Side_Laterals/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Otis-Up",
+    "name": "Otis-Up",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Otis-Up/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Otis-Up/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Overhead_Cable_Curl",
+    "name": "Overhead Cable Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Overhead_Cable_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Overhead_Cable_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Palms-Down_Dumbbell_Wrist_Curl_Over_A_Bench",
+    "name": "Palms-Down Dumbbell Wrist Curl Over A Bench",
+    "bodyPart": "Arms",
+    "target": "Forearms",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Palms-Down_Dumbbell_Wrist_Curl_Over_A_Bench/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Palms-Down_Dumbbell_Wrist_Curl_Over_A_Bench/1.jpg",
+    "muscleGroup": "Antebrazo"
+  },
+  {
+    "id": "Palms-Down_Wrist_Curl_Over_A_Bench",
+    "name": "Palms-Down Wrist Curl Over A Bench",
+    "bodyPart": "Arms",
+    "target": "Forearms",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Palms-Down_Wrist_Curl_Over_A_Bench/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Palms-Down_Wrist_Curl_Over_A_Bench/1.jpg",
+    "muscleGroup": "Antebrazo"
+  },
+  {
+    "id": "Palms-Up_Barbell_Wrist_Curl_Over_A_Bench",
+    "name": "Palms-Up Barbell Wrist Curl Over A Bench",
+    "bodyPart": "Arms",
+    "target": "Forearms",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Palms-Up_Barbell_Wrist_Curl_Over_A_Bench/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Palms-Up_Barbell_Wrist_Curl_Over_A_Bench/1.jpg",
+    "muscleGroup": "Antebrazo"
+  },
+  {
+    "id": "Parallel_Bar_Dip",
+    "name": "Parallel Bar Dip",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Parallel_Bar_Dip/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Parallel_Bar_Dip/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Physioball_Hip_Bridge",
+    "name": "Physioball Hip Bridge",
+    "bodyPart": "Legs",
+    "target": "Glutes",
+    "equipment": "Exercise ball",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Physioball_Hip_Bridge/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Physioball_Hip_Bridge/1.jpg",
+    "muscleGroup": "Glutes"
+  },
+  {
+    "id": "Plate_Twist",
+    "name": "Plate Twist",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Plate_Twist/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Plate_Twist/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Platform_Hamstring_Slides",
+    "name": "Platform Hamstring Slides",
+    "bodyPart": "Legs",
+    "target": "Hamstrings",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Platform_Hamstring_Slides/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Platform_Hamstring_Slides/1.jpg",
+    "muscleGroup": "Isquiotibiales"
+  },
+  {
+    "id": "Plyo_Kettlebell_Pushups",
+    "name": "Plyo Kettlebell Pushups",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Kettlebells",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Plyo_Kettlebell_Pushups/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Plyo_Kettlebell_Pushups/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Power_Clean",
+    "name": "Power Clean",
+    "bodyPart": "Legs",
+    "target": "Hamstrings",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Power_Clean/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Power_Clean/1.jpg",
+    "muscleGroup": "Isquiotibiales"
+  },
+  {
+    "id": "Power_Partials",
+    "name": "Power Partials",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Power_Partials/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Power_Partials/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Preacher_Hammer_Dumbbell_Curl",
+    "name": "Preacher Hammer Dumbbell Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Preacher_Hammer_Dumbbell_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Preacher_Hammer_Dumbbell_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Prone_Manual_Hamstring",
+    "name": "Prone Manual Hamstring",
+    "bodyPart": "Legs",
+    "target": "Hamstrings",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Prone_Manual_Hamstring/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Prone_Manual_Hamstring/1.jpg",
+    "muscleGroup": "Isquiotibiales"
+  },
+  {
+    "id": "Pull_Through",
+    "name": "Pull Through",
+    "bodyPart": "Legs",
+    "target": "Glutes",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Pull_Through/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Pull_Through/1.jpg",
+    "muscleGroup": "Glutes"
+  },
+  {
+    "id": "Push-Up_Wide",
+    "name": "Push-Up Wide",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Push-Up_Wide/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Push-Up_Wide/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Push-Ups_-_Close_Triceps_Position",
+    "name": "Push-Ups - Close Triceps Position",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Push-Ups_-_Close_Triceps_Position/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Push-Ups_-_Close_Triceps_Position/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Push-Ups_With_Feet_Elevated",
+    "name": "Push-Ups With Feet Elevated",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Push-Ups_With_Feet_Elevated/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Push-Ups_With_Feet_Elevated/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Pushups",
+    "name": "Pushups",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Pushups/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Pushups/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Pushups_Close_and_Wide_Hand_Positions",
+    "name": "Pushups (Close and Wide Hand Positions)",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Pushups_Close_and_Wide_Hand_Positions/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Pushups_Close_and_Wide_Hand_Positions/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Reverse_Barbell_Curl",
+    "name": "Reverse Barbell Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Reverse_Barbell_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Reverse_Barbell_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Reverse_Barbell_Preacher_Curls",
+    "name": "Reverse Barbell Preacher Curls",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "E-z curl bar",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Reverse_Barbell_Preacher_Curls/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Reverse_Barbell_Preacher_Curls/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Reverse_Cable_Curl",
+    "name": "Reverse Cable Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Reverse_Cable_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Reverse_Cable_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Reverse_Crunch",
+    "name": "Reverse Crunch",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Reverse_Crunch/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Reverse_Crunch/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Reverse_Flyes",
+    "name": "Reverse Flyes",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Reverse_Flyes/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Reverse_Flyes/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Reverse_Grip_Triceps_Pushdown",
+    "name": "Reverse Grip Triceps Pushdown",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Reverse_Grip_Triceps_Pushdown/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Reverse_Grip_Triceps_Pushdown/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Reverse_Plate_Curls",
+    "name": "Reverse Plate Curls",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Reverse_Plate_Curls/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Reverse_Plate_Curls/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Ring_Dips",
+    "name": "Ring Dips",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Ring_Dips/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Ring_Dips/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Rocking_Standing_Calf_Raise",
+    "name": "Rocking Standing Calf Raise",
+    "bodyPart": "Legs",
+    "target": "Calves",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Rocking_Standing_Calf_Raise/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Rocking_Standing_Calf_Raise/1.jpg",
+    "muscleGroup": "Pantorrillas"
+  },
+  {
+    "id": "Russian_Twist",
+    "name": "Russian Twist",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Russian_Twist/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Russian_Twist/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Seated_Cable_Rows",
+    "name": "Seated Cable Rows",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Seated_Cable_Rows/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Seated_Cable_Rows/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Seated_Cable_Shoulder_Press",
+    "name": "Seated Cable Shoulder Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Seated_Cable_Shoulder_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Seated_Cable_Shoulder_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Seated_Dumbbell_Curl",
+    "name": "Seated Dumbbell Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Seated_Dumbbell_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Seated_Dumbbell_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Seated_Dumbbell_Palms-Up_Wrist_Curl",
+    "name": "Seated Dumbbell Palms-Up Wrist Curl",
+    "bodyPart": "Arms",
+    "target": "Forearms",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Seated_Dumbbell_Palms-Up_Wrist_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Seated_Dumbbell_Palms-Up_Wrist_Curl/1.jpg",
+    "muscleGroup": "Antebrazo"
+  },
+  {
+    "id": "Seated_Leg_Curl",
+    "name": "Seated Leg Curl",
+    "bodyPart": "Legs",
+    "target": "Hamstrings",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Seated_Leg_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Seated_Leg_Curl/1.jpg",
+    "muscleGroup": "Isquiotibiales"
+  },
+  {
+    "id": "Seated_Leg_Tucks",
+    "name": "Seated Leg Tucks",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Seated_Leg_Tucks/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Seated_Leg_Tucks/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Seated_One-arm_Cable_Pulley_Rows",
+    "name": "Seated One-arm Cable Pulley Rows",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Seated_One-arm_Cable_Pulley_Rows/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Seated_One-arm_Cable_Pulley_Rows/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Seated_One-Arm_Dumbbell_Palms-Down_Wrist_Curl",
+    "name": "Seated One-Arm Dumbbell Palms-Down Wrist Curl",
+    "bodyPart": "Arms",
+    "target": "Forearms",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Seated_One-Arm_Dumbbell_Palms-Down_Wrist_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Seated_One-Arm_Dumbbell_Palms-Down_Wrist_Curl/1.jpg",
+    "muscleGroup": "Antebrazo"
+  },
+  {
+    "id": "Seated_Palm-Up_Barbell_Wrist_Curl",
+    "name": "Seated Palm-Up Barbell Wrist Curl",
+    "bodyPart": "Arms",
+    "target": "Forearms",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Seated_Palm-Up_Barbell_Wrist_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Seated_Palm-Up_Barbell_Wrist_Curl/1.jpg",
+    "muscleGroup": "Antebrazo"
+  },
+  {
+    "id": "Seated_Triceps_Press",
+    "name": "Seated Triceps Press",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Seated_Triceps_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Seated_Triceps_Press/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "See-Saw_Press_Alternating_Side_Press",
+    "name": "See-Saw Press (Alternating Side Press)",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/See-Saw_Press_Alternating_Side_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/See-Saw_Press_Alternating_Side_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Side_Bridge",
+    "name": "Side Bridge",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Side_Bridge/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Side_Bridge/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Side_Lateral_Raise",
+    "name": "Side Lateral Raise",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Side_Lateral_Raise/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Side_Lateral_Raise/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Side_Laterals_to_Front_Raise",
+    "name": "Side Laterals to Front Raise",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Side_Laterals_to_Front_Raise/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Side_Laterals_to_Front_Raise/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Side_To_Side_Chins",
+    "name": "Side To Side Chins",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Side_To_Side_Chins/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Side_To_Side_Chins/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Single-Arm_Linear_Jammer",
+    "name": "Single-Arm Linear Jammer",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Single-Arm_Linear_Jammer/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Single-Arm_Linear_Jammer/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Single-Arm_Push-Up",
+    "name": "Single-Arm Push-Up",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Single-Arm_Push-Up/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Single-Arm_Push-Up/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Single-Leg_High_Box_Squat",
+    "name": "Single-Leg High Box Squat",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Single-Leg_High_Box_Squat/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Single-Leg_High_Box_Squat/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Sit-Up",
+    "name": "Sit-Up",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Sit-Up/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Sit-Up/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Sled_Overhead_Backward_Walk",
+    "name": "Sled Overhead Backward Walk",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Sled_Overhead_Backward_Walk/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Sled_Overhead_Backward_Walk/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Sled_Reverse_Flye",
+    "name": "Sled Reverse Flye",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Sled_Reverse_Flye/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Sled_Reverse_Flye/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Smith_Incline_Shoulder_Raise",
+    "name": "Smith Incline Shoulder Raise",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Smith_Incline_Shoulder_Raise/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Smith_Incline_Shoulder_Raise/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Smith_Machine_Behind_the_Back_Shrug",
+    "name": "Smith Machine Behind the Back Shrug",
+    "bodyPart": "Shoulders",
+    "target": "Traps",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Smith_Machine_Behind_the_Back_Shrug/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Smith_Machine_Behind_the_Back_Shrug/1.jpg",
+    "muscleGroup": "Traps"
+  },
+  {
+    "id": "Smith_Machine_Bench_Press",
+    "name": "Smith Machine Bench Press",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Smith_Machine_Bench_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Smith_Machine_Bench_Press/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Smith_Machine_Bent_Over_Row",
+    "name": "Smith Machine Bent Over Row",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Smith_Machine_Bent_Over_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Smith_Machine_Bent_Over_Row/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Smith_Machine_Calf_Raise",
+    "name": "Smith Machine Calf Raise",
+    "bodyPart": "Legs",
+    "target": "Calves",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Smith_Machine_Calf_Raise/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Smith_Machine_Calf_Raise/1.jpg",
+    "muscleGroup": "Pantorrillas"
+  },
+  {
+    "id": "Smith_Machine_Decline_Press",
+    "name": "Smith Machine Decline Press",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Smith_Machine_Decline_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Smith_Machine_Decline_Press/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Smith_Machine_Hang_Power_Clean",
+    "name": "Smith Machine Hang Power Clean",
+    "bodyPart": "Legs",
+    "target": "Hamstrings",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Smith_Machine_Hang_Power_Clean/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Smith_Machine_Hang_Power_Clean/1.jpg",
+    "muscleGroup": "Isquiotibiales"
+  },
+  {
+    "id": "Smith_Machine_Incline_Bench_Press",
+    "name": "Smith Machine Incline Bench Press",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Smith_Machine_Incline_Bench_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Smith_Machine_Incline_Bench_Press/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Smith_Machine_Overhead_Shoulder_Press",
+    "name": "Smith Machine Overhead Shoulder Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Smith_Machine_Overhead_Shoulder_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Smith_Machine_Overhead_Shoulder_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Smith_Machine_Pistol_Squat",
+    "name": "Smith Machine Pistol Squat",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Smith_Machine_Pistol_Squat/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Smith_Machine_Pistol_Squat/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Smith_Machine_Reverse_Calf_Raises",
+    "name": "Smith Machine Reverse Calf Raises",
+    "bodyPart": "Legs",
+    "target": "Calves",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Smith_Machine_Reverse_Calf_Raises/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Smith_Machine_Reverse_Calf_Raises/1.jpg",
+    "muscleGroup": "Pantorrillas"
+  },
+  {
+    "id": "Smith_Machine_Squat",
+    "name": "Smith Machine Squat",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Machine",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Smith_Machine_Squat/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Smith_Machine_Squat/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Speed_Band_Overhead_Triceps",
+    "name": "Speed Band Overhead Triceps",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Bands",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Speed_Band_Overhead_Triceps/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Speed_Band_Overhead_Triceps/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Speed_Squats",
+    "name": "Speed Squats",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Speed_Squats/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Speed_Squats/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Squat_with_Plate_Movers",
+    "name": "Squat with Plate Movers",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Squat_with_Plate_Movers/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Squat_with_Plate_Movers/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Squats_-_With_Bands",
+    "name": "Squats - With Bands",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Bands",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Squats_-_With_Bands/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Squats_-_With_Bands/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Standing_Alternating_Dumbbell_Press",
+    "name": "Standing Alternating Dumbbell Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Alternating_Dumbbell_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Alternating_Dumbbell_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Standing_Barbell_Press_Behind_Neck",
+    "name": "Standing Barbell Press Behind Neck",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Barbell_Press_Behind_Neck/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Barbell_Press_Behind_Neck/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Standing_Bent-Over_One-Arm_Dumbbell_Triceps_Extension",
+    "name": "Standing Bent-Over One-Arm Dumbbell Triceps Extension",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Bent-Over_One-Arm_Dumbbell_Triceps_Extension/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Bent-Over_One-Arm_Dumbbell_Triceps_Extension/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Standing_Bent-Over_Two-Arm_Dumbbell_Triceps_Extension",
+    "name": "Standing Bent-Over Two-Arm Dumbbell Triceps Extension",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Bent-Over_Two-Arm_Dumbbell_Triceps_Extension/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Bent-Over_Two-Arm_Dumbbell_Triceps_Extension/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Standing_Biceps_Cable_Curl",
+    "name": "Standing Biceps Cable Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Biceps_Cable_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Biceps_Cable_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Standing_Cable_Wood_Chop",
+    "name": "Standing Cable Wood Chop",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Cable_Wood_Chop/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Cable_Wood_Chop/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Standing_Dumbbell_Triceps_Extension",
+    "name": "Standing Dumbbell Triceps Extension",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Dumbbell_Triceps_Extension/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Dumbbell_Triceps_Extension/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Standing_Dumbbell_Upright_Row",
+    "name": "Standing Dumbbell Upright Row",
+    "bodyPart": "Shoulders",
+    "target": "Traps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Dumbbell_Upright_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Dumbbell_Upright_Row/1.jpg",
+    "muscleGroup": "Traps"
+  },
+  {
+    "id": "Standing_Front_Barbell_Raise_Over_Head",
+    "name": "Standing Front Barbell Raise Over Head",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Front_Barbell_Raise_Over_Head/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Front_Barbell_Raise_Over_Head/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Standing_Inner-Biceps_Curl",
+    "name": "Standing Inner-Biceps Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Inner-Biceps_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Inner-Biceps_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Standing_Military_Press",
+    "name": "Standing Military Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Military_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Military_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Standing_One-Arm_Cable_Curl",
+    "name": "Standing One-Arm Cable Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_One-Arm_Cable_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_One-Arm_Cable_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Standing_One-Arm_Dumbbell_Triceps_Extension",
+    "name": "Standing One-Arm Dumbbell Triceps Extension",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_One-Arm_Dumbbell_Triceps_Extension/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_One-Arm_Dumbbell_Triceps_Extension/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Standing_Overhead_Barbell_Triceps_Extension",
+    "name": "Standing Overhead Barbell Triceps Extension",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Overhead_Barbell_Triceps_Extension/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Overhead_Barbell_Triceps_Extension/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Standing_Palms-In_Dumbbell_Press",
+    "name": "Standing Palms-In Dumbbell Press",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Palms-In_Dumbbell_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Palms-In_Dumbbell_Press/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Standing_Palms-Up_Barbell_Behind_The_Back_Wrist_Curl",
+    "name": "Standing Palms-Up Barbell Behind The Back Wrist Curl",
+    "bodyPart": "Arms",
+    "target": "Forearms",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Standing_Palms-Up_Barbell_Behind_The_Back_Wrist_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Standing_Palms-Up_Barbell_Behind_The_Back_Wrist_Curl/1.jpg",
+    "muscleGroup": "Antebrazo"
+  },
+  {
+    "id": "Straight_Raises_on_Incline_Bench",
+    "name": "Straight Raises on Incline Bench",
+    "bodyPart": "Shoulders",
+    "target": "Shoulders",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Straight_Raises_on_Incline_Bench/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Straight_Raises_on_Incline_Bench/1.jpg",
+    "muscleGroup": "Hombro"
+  },
+  {
+    "id": "Straight-Arm_Pulldown",
+    "name": "Straight-Arm Pulldown",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Straight-Arm_Pulldown/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Straight-Arm_Pulldown/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Suspended_Push-Up",
+    "name": "Suspended Push-Up",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Suspended_Push-Up/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Suspended_Push-Up/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Suspended_Row",
+    "name": "Suspended Row",
+    "bodyPart": "Back",
+    "target": "Middle back",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Suspended_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Suspended_Row/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Svend_Press",
+    "name": "Svend Press",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Other",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Svend_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Svend_Press/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Triceps_Pushdown",
+    "name": "Triceps Pushdown",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Triceps_Pushdown/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Triceps_Pushdown/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Triceps_Pushdown_-_V-Bar_Attachment",
+    "name": "Triceps Pushdown - V-Bar Attachment",
+    "bodyPart": "Arms",
+    "target": "Triceps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Triceps_Pushdown_-_V-Bar_Attachment/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Triceps_Pushdown_-_V-Bar_Attachment/1.jpg",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "id": "Tuck_Crunch",
+    "name": "Tuck Crunch",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Tuck_Crunch/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Tuck_Crunch/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Upright_Cable_Row",
+    "name": "Upright Cable Row",
+    "bodyPart": "Shoulders",
+    "target": "Traps",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Upright_Cable_Row/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Upright_Cable_Row/1.jpg",
+    "muscleGroup": "Traps"
+  },
+  {
+    "id": "Upright_Row_-_With_Bands",
+    "name": "Upright Row - With Bands",
+    "bodyPart": "Shoulders",
+    "target": "Traps",
+    "equipment": "Bands",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Upright_Row_-_With_Bands/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Upright_Row_-_With_Bands/1.jpg",
+    "muscleGroup": "Traps"
+  },
+  {
+    "id": "Weighted_Ball_Side_Bend",
+    "name": "Weighted Ball Side Bend",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Exercise ball",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Weighted_Ball_Side_Bend/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Weighted_Ball_Side_Bend/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Weighted_Crunches",
+    "name": "Weighted Crunches",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Medicine ball",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Weighted_Crunches/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Weighted_Crunches/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Weighted_Sissy_Squat",
+    "name": "Weighted Sissy Squat",
+    "bodyPart": "Legs",
+    "target": "Quadriceps",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Weighted_Sissy_Squat/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Weighted_Sissy_Squat/1.jpg",
+    "muscleGroup": "Cuádriceps"
+  },
+  {
+    "id": "Wide-Grip_Barbell_Bench_Press",
+    "name": "Wide-Grip Barbell Bench Press",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Wide-Grip_Barbell_Bench_Press/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Wide-Grip_Barbell_Bench_Press/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Wide-Grip_Decline_Barbell_Pullover",
+    "name": "Wide-Grip Decline Barbell Pullover",
+    "bodyPart": "Chest",
+    "target": "Chest",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Wide-Grip_Decline_Barbell_Pullover/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Wide-Grip_Decline_Barbell_Pullover/1.jpg",
+    "muscleGroup": "Pecho"
+  },
+  {
+    "id": "Wide-Grip_Lat_Pulldown",
+    "name": "Wide-Grip Lat Pulldown",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Wide-Grip_Lat_Pulldown/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Wide-Grip_Lat_Pulldown/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Wide-Grip_Pulldown_Behind_The_Neck",
+    "name": "Wide-Grip Pulldown Behind The Neck",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Cable",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Wide-Grip_Pulldown_Behind_The_Neck/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Wide-Grip_Pulldown_Behind_The_Neck/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Wide-Grip_Rear_Pull-Up",
+    "name": "Wide-Grip Rear Pull-Up",
+    "bodyPart": "Back",
+    "target": "Lats",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Wide-Grip_Rear_Pull-Up/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Wide-Grip_Rear_Pull-Up/1.jpg",
+    "muscleGroup": "Espalda"
+  },
+  {
+    "id": "Wind_Sprints",
+    "name": "Wind Sprints",
+    "bodyPart": "Core",
+    "target": "Abdominals",
+    "equipment": "Bodyweight",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Wind_Sprints/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Wind_Sprints/1.jpg",
+    "muscleGroup": "Abdominales"
+  },
+  {
+    "id": "Wrist_Rotations_with_Straight_Bar",
+    "name": "Wrist Rotations with Straight Bar",
+    "bodyPart": "Arms",
+    "target": "Forearms",
+    "equipment": "Barbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Wrist_Rotations_with_Straight_Bar/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Wrist_Rotations_with_Straight_Bar/1.jpg",
+    "muscleGroup": "Antebrazo"
+  },
+  {
+    "id": "Zottman_Curl",
+    "name": "Zottman Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Zottman_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Zottman_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  },
+  {
+    "id": "Zottman_Preacher_Curl",
+    "name": "Zottman Preacher Curl",
+    "bodyPart": "Arms",
+    "target": "Biceps",
+    "equipment": "Dumbbell",
+    "imageUrl": "https://ik.imagekit.io/yuhonas/Zottman_Preacher_Curl/0.jpg",
+    "imageUrl2": "https://ik.imagekit.io/yuhonas/Zottman_Preacher_Curl/1.jpg",
+    "muscleGroup": "Bíceps"
+  }
+]

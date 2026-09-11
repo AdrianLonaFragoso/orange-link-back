@@ -16,7 +16,7 @@ const ADMIN_HTML = (users: any[], message?: string, error?: string) => `<!DOCTYP
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orange Link — Admin</title>
+<title>Orange Link — Modo Coach</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -162,8 +162,8 @@ const ADMIN_HTML = (users: any[], message?: string, error?: string) => `<!DOCTYP
 <div class="container">
   <div class="header-bar">
     <div>
-      <h1>🟠 Orange Link</h1>
-      <p class="subtitle">Panel de administración</p>
+      <h1>🏋️ Modo Coach</h1>
+      <p class="subtitle">Panel de administración — Gestión de usuarios, plantillas y rutinas</p>
     </div>
     <form method="POST" action="/admin/logout" style="margin:0">
       <button class="btn-danger" type="submit">Cerrar sesión</button>
@@ -252,9 +252,19 @@ const ADMIN_HTML = (users: any[], message?: string, error?: string) => `<!DOCTYP
         <label>Nombre de la plantilla</label>
         <input type="text" id="template-name" placeholder="Ej: Brazo y Hombro" />
       </div>
+      <div style="background:rgba(77,163,255,0.06);border:1px solid rgba(77,163,255,0.15);border-radius:10px;padding:0.8rem">
+        <label style="color:#4DA3FF">📚 Biblioteca Free Exercise DB — 250 ejercicios (EN) — búsqueda</label>
+        <input type="text" id="catalog-search" list="catalog-datalist" placeholder="Escribe: bench, curl, squat, press..." autocomplete="off" style="width:100%;padding:0.7rem 1rem;border-radius:10px;border:1px solid rgba(77,163,255,0.2);background:#0f0f13;color:#e8e8ed;font-size:0.85rem;margin-top:0.4rem" />
+        <datalist id="catalog-datalist"></datalist>
+        <div style="display:flex;gap:0.5rem;margin-top:0.5rem;align-items:center">
+          <span id="catalog-preview" style="flex:1;font-size:0.7rem;color:#8e8e93;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"></span>
+          <button type="button" class="btn btn-approve" onclick="insertCatalogExercise()" style="font-size:0.65rem;white-space:nowrap">+ Insertar al CSV</button>
+        </div>
+        <p style="font-size:0.65rem;color:#8e8e93;margin-top:0.3rem">Al seleccionar, autocompleta nombre, músculo e imagen. Escribe 2+ letras para sugerencias.</p>
+      </div>
       <div>
-        <label>CSV de ejercicios</label>
-        <textarea id="template-csv" rows="6" style="width:100%;padding:0.7rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:#0f0f13;color:#e8e8ed;font-size:0.85rem;font-family:monospace;resize:vertical" placeholder="nombre,target,sets,unit,muscle&#10;Curl martillo,15,3,reps,Bíceps&#10;Jalón de tríceps,15,3,reps,Tríceps&#10;Elevaciones laterales,15,3,reps,Hombro"></textarea>
+        <label>CSV de ejercicios <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#8e8e93;font-size:0.7rem">— soporta columnas opcionales <code>imageUrl,imageUrl2</code> (inicio/fin, Free Exercise DB)</span></label>
+        <textarea id="template-csv" rows="6" style="width:100%;padding:0.7rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:#0f0f13;color:#e8e8ed;font-size:0.85rem;font-family:monospace;resize:vertical" placeholder="nombre,target,sets,unit,muscle,imageUrl,imageUrl2&#10;Curl martillo,15,3,reps,Bíceps,https://.../0.jpg,https://.../1.jpg&#10;Jalón de tríceps,15,3,reps,Tríceps,,,&#10;Elevaciones laterales,15,3,reps,Hombro"></textarea>
       </div>
       <div>
         <label>O sube un archivo CSV</label>
@@ -264,6 +274,33 @@ const ADMIN_HTML = (users: any[], message?: string, error?: string) => `<!DOCTYP
         <button class="btn btn-copy" id="btn-copy-format" onclick="copyFormatCSV()" type="button" style="font-size:0.65rem">📋 Copiar formato</button>
         <button class="btn btn-approve" onclick="downloadSampleCSV()" type="button" style="font-size:0.65rem">📄 Descargar CSV de ejemplo</button>
       </div>
+      <!-- Asignar rutina a día -->
+      <hr style="border-color:rgba(255,255,255,0.06);margin:1.2rem 0">
+      <h4 style="font-size:0.85rem;font-weight:800;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.04em">Asignar rutina a día</h4>
+      <p class="sub" style="margin-bottom:0.6rem">Selecciona un día y una plantilla para asignarla directamente a la rutina semanal del usuario</p>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:end">
+        <div style="flex:1;min-width:140px">
+          <label>Día</label>
+          <select id="assign-day" style="width:100%;padding:0.7rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:#0f0f13;color:#e8e8ed;font-size:0.9rem">
+            <option value="lunes">Lunes</option>
+            <option value="martes">Martes</option>
+            <option value="miercoles">Miércoles</option>
+            <option value="jueves">Jueves</option>
+            <option value="viernes">Viernes</option>
+            <option value="sabado">Sábado</option>
+            <option value="domingo">Domingo</option>
+          </select>
+        </div>
+        <div style="flex:2;min-width:180px">
+          <label>Plantilla a asignar</label>
+          <select id="assign-template" style="width:100%;padding:0.7rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:#0f0f13;color:#e8e8ed;font-size:0.9rem">
+            <option value="">— selecciona plantilla —</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-approve" onclick="assignTemplate()" style="height:42px;white-space:nowrap">Asignar</button>
+      </div>
+      <div id="assign-error" class="modal-error" style="display:none"></div>
+      <div id="assign-success" style="display:none;color:#22c55e;font-size:0.8rem;margin-top:0.5rem;text-align:center"></div>
       <div id="template-error" class="modal-error" style="display:none"></div>
       <div class="btn-row">
         <button type="button" class="btn btn-cancel" onclick="closeModal('templates')">Cerrar</button>
@@ -370,7 +407,12 @@ function loadTemplates(userId) {
     .then(r => r.json())
     .then(data => {
       const list = document.getElementById('templates-list');
+      const assignSel = document.getElementById('assign-template');
       const entries = Object.entries(data.templates || {});
+      // populate assign selector
+      if (assignSel) {
+        assignSel.innerHTML = '<option value="">— selecciona plantilla —</option>' + entries.map(function(e){ var n=e[0]; return '<option value="'+n.replace(/"/g,'&quot;')+'">'+n+'</option>'; }).join('');
+      }
       if (entries.length === 0) {
         list.innerHTML = '<p style="color:#8e8e93;font-size:0.8rem;text-align:center;padding:1rem">No hay plantillas guardadas</p>';
         return;
@@ -381,7 +423,7 @@ function loadTemplates(userId) {
         return '<div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.03);border-radius:10px;padding:0.6rem 0.8rem;margin-bottom:0.4rem">' +
           '<div style="flex:1;min-width:0">' +
             '<strong style="font-size:0.8rem;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + name + '</strong>' +
-            '<span style="font-size:0.7rem;color:#8e8e93">' + exercises.length + ' ejercicio' + (exercises.length !== 1 ? 's' : '') + '</span>' +
+            '<span style="font-size:0.7rem;color:#8e8e93">' + exercises.length + ' ejercicio' + (exercises.length !== 1 ? 's' : '') + (exercises.some(function(ex){return ex.imageUrl}) ? ' · 📷' : '') + '</span>' +
           '</div>' +
           '<div style="display:flex;gap:0.3rem">' +
             '<button class="btn btn-edit tpl-edit" data-tplname="' + nameEsc + '" data-tpl-exercises="' + exercisesEsc + '" style="padding:0.3rem 0.6rem;font-size:0.65rem">Editar</button>' +
@@ -474,10 +516,13 @@ function editTemplate(btn) {
   document.getElementById('template-name').value = name;
   document.getElementById('btn-submit-template').textContent = 'Actualizar plantilla';
 
-  var header = 'nombre,target,sets,unit,muscle';
+  var header = 'nombre,target,sets,unit,muscle,imageUrl,imageUrl2';
   var rows = exercises.map(function(ex) {
     var muscle = ex.muscleGroup || '';
-    return ex.name + ',' + ex.target + ',' + ex.sets + ',' + ex.unit + ',' + muscle;
+    var img = ex.imageUrl || '';
+    var img2 = ex.imageUrl2 || '';
+    var n = ex.name.indexOf(',') !== -1 ? '"' + ex.name.replace(/"/g,'""') + '"' : ex.name;
+    return n + ',' + ex.target + ',' + ex.sets + ',' + ex.unit + ',' + muscle + ',' + img + ',' + img2;
   });
   document.getElementById('template-csv').value = header + '\\n' + rows.join('\\n');
 
@@ -485,7 +530,7 @@ function editTemplate(btn) {
 }
 
 function downloadSampleCSV() {
-  const csv = 'nombre,target,sets,unit,muscle\\nCurl martillo,15,3,reps,Bíceps\\nJalón de tríceps en polea,15,3,reps,Tríceps\\nElevaciones laterales,15,3,reps,Hombro\\nPress de banca con mancuernas,12,4,reps,Pecho\\nRemo en polea,12,4,reps,Espalda\\nSentadilla asistida,15,3,reps,Pierna';
+  const csv = 'nombre,target,sets,unit,muscle,imageUrl,imageUrl2\\nCurl martillo,15,3,reps,Bíceps,https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternate_Hammer_Curl/0.jpg,https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternate_Hammer_Curl/1.jpg\\nJalón de tríceps en polea,15,3,reps,Tríceps,,,\\nElevaciones laterales,15,3,reps,Hombro,,\\nPress de banca con mancuernas,12,4,reps,Pecho,,\\nRemo en polea,12,4,reps,Espalda,,\\nSentadilla asistida,15,3,reps,Pierna,,';
   const blob = new Blob([csv], { type: 'text/csv' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -496,12 +541,88 @@ function downloadSampleCSV() {
 }
 
 function copyFormatCSV() {
-  const csv = 'nombre,target,sets,unit,muscle\\nCurl martillo,15,3,reps,Bíceps\\nJalón de tríceps en polea,15,3,reps,Tríceps';
+  const csv = 'nombre,target,sets,unit,muscle,imageUrl\\nCurl martillo,15,3,reps,Bíceps,https://ejemplo.com/curl.jpg\\nJalón de tríceps en polea,15,3,reps,Tríceps,';
   navigator.clipboard.writeText(csv).catch(function() {});
   var btn = document.getElementById('btn-copy-format');
   var orig = btn.textContent;
   btn.textContent = '✓ Copiado';
   setTimeout(function() { btn.textContent = orig; }, 2000);
+}
+
+function assignTemplate() {
+  var day = document.getElementById('assign-day').value;
+  var tpl = document.getElementById('assign-template').value;
+  var errEl = document.getElementById('assign-error');
+  var okEl = document.getElementById('assign-success');
+  errEl.style.display = 'none'; okEl.style.display = 'none';
+  if (!day || !tpl) { errEl.textContent = 'Selecciona día y plantilla'; errEl.style.display='block'; return; }
+  fetch('/admin/assign/' + currentTplUserId, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ day: day, templateName: tpl })
+  }).then(function(r){ return r.json(); }).then(function(data){
+    if (data.error) { errEl.textContent = data.error; errEl.style.display='block'; return; }
+    okEl.textContent = 'Rutina "' + tpl + '" asignada a ' + day + ' correctamente';
+    okEl.style.display='block';
+    setTimeout(function(){ okEl.style.display='none'; }, 3000);
+  }).catch(function(){ errEl.textContent='Error al asignar rutina'; errEl.style.display='block'; });
+}
+
+// Catalog datalist simple — Free Exercise DB 250
+var catalogData = [];
+var selectedCatalog = null;
+fetch('/freeExerciseDb.json').then(function(r){ return r.json(); }).then(function(data){
+  catalogData = Array.isArray(data) ? data : [];
+  updateCatalogDatalist('');
+}).catch(function(){ /* ignore */ });
+
+function updateCatalogDatalist(q) {
+  var dl = document.getElementById('catalog-datalist');
+  var preview = document.getElementById('catalog-preview');
+  if (!dl) return;
+  var query = (q || document.getElementById('catalog-search').value || '').toLowerCase().trim();
+  var filtered = catalogData;
+  if (query.length >= 2) {
+    var nq = query.normalize('NFD').replace(/\\p{Diacritic}/gu,'');
+    filtered = catalogData.filter(function(c){
+      var name = c.name.toLowerCase().normalize('NFD').replace(/\\p{Diacritic}/gu,'');
+      return name.includes(nq) || c.target.toLowerCase().includes(nq) || c.bodyPart.toLowerCase().includes(nq);
+    }).slice(0,20);
+  } else {
+    filtered = catalogData.slice(0,20);
+  }
+  dl.innerHTML = filtered.map(function(c){ return '<option value=\"' + c.name.replace(/\"/g,'&quot;') + '\"></option>'; }).join('');
+  if (preview) {
+    var exact = catalogData.find(function(c){ return c.name.toLowerCase() === query.toLowerCase(); });
+    if (exact) {
+      preview.textContent = exact.target + ' · ' + exact.equipment + ' · ' + exact.bodyPart;
+      selectedCatalog = exact;
+    } else if (filtered[0] && query.length >= 2) {
+      preview.textContent = 'Sugerencia: ' + filtered[0].name + ' — ' + filtered[0].target;
+      selectedCatalog = filtered[0];
+    } else {
+      preview.textContent = '';
+      selectedCatalog = null;
+    }
+  }
+}
+
+document.getElementById('catalog-search')?.addEventListener('input', function(e){ updateCatalogDatalist(e.target.value); });
+document.getElementById('catalog-search')?.addEventListener('focus', function(e){ updateCatalogDatalist(e.target.value); });
+
+function insertCatalogExercise() {
+  var input = document.getElementById('catalog-search');
+  var csvEl = document.getElementById('template-csv');
+  var q = input.value.trim();
+  if (!q) return;
+  var match = catalogData.find(function(c){ return c.name.toLowerCase() === q.toLowerCase(); }) || selectedCatalog || catalogData.find(function(c){ return c.name.toLowerCase().includes(q.toLowerCase()); });
+  if (!match) return;
+  var line = match.name + ',12,3,reps,' + match.target + ',' + (match.imageUrl||'') + ',' + (match.imageUrl2||'');
+  if (csvEl.value.trim() && !csvEl.value.trim().endsWith('\\n')) csvEl.value += '\\n';
+  if (!csvEl.value.trim()) csvEl.value = 'nombre,target,sets,unit,muscle,imageUrl,imageUrl2\\n';
+  else if (!/nombre/i.test(csvEl.value.split('\\n')[0])) csvEl.value = 'nombre,target,sets,unit,muscle,imageUrl,imageUrl2\\n' + csvEl.value;
+  csvEl.value += line + '\\n';
+  csvEl.focus();
 }
 </script>
 </body>
@@ -726,7 +847,7 @@ export async function uploadTemplate(req: Request, res: Response, next: NextFunc
     }
 
     const lines = csvContent.split('\n').map((l: string) => l.trim()).filter(Boolean);
-    const exercises: { name: string; target: number; sets: number; unit: string; muscleGroup?: string }[] = [];
+    const exercises: { name: string; target: number; sets: number; unit: string; muscleGroup?: string; imageUrl?: string | null }[] = [];
     let headerSkipped = false;
 
     for (const line of lines) {
@@ -739,14 +860,18 @@ export async function uploadTemplate(req: Request, res: Response, next: NextFunc
       const parts = line.split(',').map((p: string) => p.trim());
       if (parts.length < 4) continue;
 
-      const name = parts[0];
+      const name = parts[0].replace(/^"|"$/g,'').replace(/""/g,'"');
       const target = parseInt(parts[1], 10);
       const sets = parseInt(parts[2], 10);
       const unit = ['reps', 'km', 'min'].includes(parts[3]) ? parts[3] : 'reps';
       const muscleGroup = parts[4]?.trim() || '';
+      const imageUrl = parts[5]?.trim() ? parts[5].trim().slice(0, 2048) : null;
+      const imageUrl2 = parts[6]?.trim() ? parts[6].trim().slice(0, 2048) : null;
+      const validImage = imageUrl && (/^https?:\/\/.+/i.test(imageUrl) || /^data:image\//i.test(imageUrl)) ? imageUrl : null;
+      const validImage2 = imageUrl2 && (/^https?:\/\/.+/i.test(imageUrl2) || /^data:image\//i.test(imageUrl2)) ? imageUrl2 : null;
 
       if (name && !isNaN(target) && !isNaN(sets)) {
-        const exercise: any = { name, target, sets, unit: unit as 'reps' | 'km' | 'min' };
+        const exercise: any = { name, target, sets, unit: unit as 'reps' | 'km' | 'min', imageUrl: validImage, imageUrl2: validImage2 };
         if (muscleGroup) exercise.muscleGroup = muscleGroup;
         exercises.push(exercise);
       }
@@ -773,6 +898,65 @@ export async function uploadTemplate(req: Request, res: Response, next: NextFunc
     });
 
     res.json({ success: true, templates: updatedTemplates });
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function assignTemplate(req: Request, res: Response, next: NextFunction) {
+  try {
+    const userId = req.params.userId as string;
+    const { day, templateName } = req.body;
+    const validDays = ['lunes','martes','miercoles','jueves','viernes','sabado','domingo'];
+    if (!day || !validDays.includes(day)) {
+      res.status(400).json({ error: 'Día inválido. Usa: ' + validDays.join(', ') });
+      return;
+    }
+    if (!templateName) {
+      res.status(400).json({ error: 'templateName es requerido' });
+      return;
+    }
+    const config = await prisma.trainingConfig.findUnique({ where: { userId } });
+    const templates = (config?.templates as Record<string, any[]>) || {};
+    const exercises = templates[templateName];
+    if (!exercises) {
+      res.status(404).json({ error: `Plantilla "${templateName}" no encontrada` });
+      return;
+    }
+    // sanitize and ensure ids + imageUrl + imageUrl2
+    const sanitized = exercises.map((ex: any) => ({
+      id: ex.id || undefined,
+      name: String(ex.name).slice(0,120),
+      target: Number(ex.target) || 0,
+      sets: Number(ex.sets) || 3,
+      unit: ['reps','km','min'].includes(ex.unit) ? ex.unit : 'reps',
+      muscleGroup: ex.muscleGroup || undefined,
+      weight: ex.weight != null ? Number(ex.weight) : undefined,
+      imageUrl: ex.imageUrl ?? null,
+      imageUrl2: ex.imageUrl2 ?? null,
+    }));
+    const currentSchedule = (config?.schedule as Record<string, any[]>) || {};
+    const newSchedule = { ...currentSchedule, [day]: sanitized };
+    // remove from restDays if assigned
+    const currentRest = (config?.restDays as string[]) || [];
+    const newRest = currentRest.filter((d: string) => d !== day);
+    // set dayLabel to template name if not set
+    const currentLabels = (config?.dayLabels as Record<string,string>) || {};
+    const newLabels = { ...currentLabels, [day]: templateName };
+    await prisma.trainingConfig.upsert({
+      where: { userId },
+      create: {
+        userId,
+        intensity: 100,
+        endDate: new Date(Date.now() + 30 * 24*60*60*1000),
+        schedule: newSchedule,
+        templates,
+        restDays: newRest,
+        dayLabels: newLabels,
+      },
+      update: { schedule: newSchedule, restDays: newRest, dayLabels: newLabels },
+    });
+    res.json({ success: true, schedule: newSchedule });
   } catch (err) {
     next(err);
   }

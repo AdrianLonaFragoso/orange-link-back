@@ -42,6 +42,9 @@ app.use('/api/v1/calculators', calculatorsRoutes);
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/admin', adminRoutes);
+app.use('/coach', adminRoutes);
+
+app.use(express.static(path.join(process.cwd(), 'public')));
 
 app.get('/favicon.ico', (req, res) => {
   res.sendFile(path.join(process.cwd(), 'public', 'favicon.ico'));
