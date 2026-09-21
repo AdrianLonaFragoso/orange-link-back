@@ -184,6 +184,20 @@ router.get('/', async (_req: Request, res: Response) => {
         <div class="endpoint"><span class="method get">GET</span><span class="path">/api/v1/hydration</span><span class="desc">Hidratación del día</span></div>
         <div class="endpoint"><span class="method get">GET</span><span class="path">/api/v1/nutrition/plans</span><span class="desc">Planes de nutrición</span></div>
         <div class="endpoint"><span class="method get">GET</span><span class="path">/api/v1/supplements</span><span class="desc">Lista de suplementos</span></div>
+        <div class="endpoint"><span class="method get">GET</span><span class="path">/api/v1/auth/me</span><span class="desc">Perfil autenticado</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="endpoints">
+        <h3>Admin API (JSON) — Frontend en /admin y /coach (apollo)</h3>
+        <div class="endpoint"><span class="method post">POST</span><span class="path">/admin/api/login</span><span class="desc">Login admin → {token}</span></div>
+        <div class="endpoint"><span class="method get">GET</span><span class="path">/admin/api/verify</span><span class="desc">Verificar sesión admin</span></div>
+        <div class="endpoint"><span class="method get">GET</span><span class="path">/admin/api/users</span><span class="desc">Listar usuarios (super user)</span></div>
+        <div class="endpoint"><span class="method get">GET</span><span class="path">/admin/api/templates</span><span class="desc">Plantillas globales</span></div>
+        <div class="endpoint"><span class="method get">GET</span><span class="path">/admin/api/training/:userId</span><span class="desc">Rutina semanal por usuario</span></div>
+        <div class="endpoint"><span class="method post">POST</span><span class="path">/admin/api/routines/:userId/day</span><span class="desc">Guardar día (pill descanso + filas)</span></div>
+        <p style="font-size:11px;color:#666;margin-top:10px">Panel HTML legacy en <code>/admin</code> removido. Usa el frontend en <code>http://localhost:8080/admin</code> (super user) y <code>/coach</code> (solo plantillas+rutinas).</p>
       </div>
     </div>
 

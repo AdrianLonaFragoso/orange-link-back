@@ -89,29 +89,36 @@ async function main() {
   }
   console.log(`Seeded ${NUTRITION_TEMPLATES.length} nutrition plan templates`);
 
-  const user = await prisma.user.findFirst();
-
-  if (!user) {
-    console.log("No users found. Skipping training seed.");
-    return;
+  // Seed global workout templates (available for all users)
+  for (const [name, exercises] of Object.entries(defaultTemplates)) {
+    await prisma.workoutTemplate.upsert({
+      where: { name },
+      create: { name, exercises: exercises as any },
+      update: {},
+    });
   }
+  console.log(`Seeded ${Object.keys(defaultTemplates).length} global workout templates`);
 
-  const defaultEnd = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
-
-  await prisma.trainingConfig.upsert({
-    where: { userId: user.id },
-    create: {
-      userId: user.id,
-      intensity: 100,
-      endDate: defaultEnd,
-      templates: defaultTemplates,
-    },
-    update: {
-      templates: defaultTemplates,
-    },
-  });
-
-  console.log(`Training config seeded for user ${user.email}`);
+  // Migrate legacy per-user templates into global table (if any)
+  try {
+    const configs = await prisma.trainingConfig.findMany({ select: { templates: true } });
+    const seen = new Set<string>(Object.keys(defaultTemplates));
+    for (const c of configs) {
+      const tpls = (c.templates as Record<string, any[]>) || {};
+      for (const [name, exercises] of Object.entries(tpls)) {
+        if (seen.has(name)) continue;
+        seen.add(name);
+        await prisma.workoutTemplate.upsert({
+          where: { name },
+          create: { name, exercises: exercises as any },
+          update: {},
+        });
+        console.log(`Migrated legacy template "${name}" to global`);
+      }
+    }
+  } catch (e) {
+    console.warn('Legacy workout template migration skipped:', e);
+  }
 }
 
 main()

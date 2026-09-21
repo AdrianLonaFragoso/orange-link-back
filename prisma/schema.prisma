@@ -162,3 +162,13 @@ model MonthlyMission {
   @@unique([userId, month])
   @@map("monthly_missions")
 }
+
+model WorkoutTemplate {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  exercises Json     @default("[]")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("workout_templates")
+}
