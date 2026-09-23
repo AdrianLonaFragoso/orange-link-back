@@ -33,7 +33,7 @@ export async function verifyAdmin(req: Request, res: Response) {
 
 export async function listUsersJson(_req: Request, res: Response, next: NextFunction) {
   try {
-    const users = await prisma.user.findMany({ orderBy: { createdAt: 'desc' }, select: { id: true, name: true, email: true, status: true, createdAt: true } });
+    const users = await prisma.user.findMany({ orderBy: { createdAt: 'desc' }, select: { id: true, name: true, email: true, status: true, createdAt: true, height: true, weight: true, age: true, sex: true, activityLevel: true, avatarUrl: true, theme: true } });
     res.json({ users });
   } catch (err) { next(err); }
 }
@@ -151,7 +151,7 @@ export async function rejectUser(req: Request, res: Response, next: NextFunction
 }
 export async function createUser(req: Request, res: Response, next: NextFunction) {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password, height, weight, age, sex, activityLevel, avatarUrl, theme } = req.body;
     if (!email || !password) {
       if (wantsJson(req)) { res.status(400).json({ error: 'Email y contraseña son requeridos' }); return; }
       res.status(400).json({ error: 'Email y contraseña son requeridos' }); return;
@@ -166,7 +166,15 @@ export async function createUser(req: Request, res: Response, next: NextFunction
       res.status(409).json({ error: `El email `+email+` ya está registrado` }); return;
     }
     const hashedPassword = await bcrypt.hash(password, 10);
-    const created = await prisma.user.create({ data: { email, name: name || email.split('@')[0], password: hashedPassword, status: 'approved' } });
+    const data: any = { email, name: name || email.split('@')[0], password: hashedPassword, status: 'approved' };
+    if (height !== undefined && height !== '' && height !== null) data.height = Number(height);
+    if (weight !== undefined && weight !== '' && weight !== null) data.weight = Number(weight);
+    if (age !== undefined && age !== '' && age !== null) data.age = parseInt(String(age), 10);
+    if (sex !== undefined && sex !== '') data.sex = String(sex);
+    if (activityLevel !== undefined && activityLevel !== '' && activityLevel !== null) data.activityLevel = Number(activityLevel);
+    if (avatarUrl !== undefined && avatarUrl !== '') data.avatarUrl = sanitizeUrl(avatarUrl) || String(avatarUrl).slice(0,2048);
+    if (theme !== undefined && (theme === 'default' || theme === 'system-shadow' || theme === 'peach')) data.theme = theme;
+    const created = await prisma.user.create({ data });
     if (wantsJson(req)) { res.json({ success: true, user: { id: created.id, name: created.name, email: created.email, status: created.status } }); return; }
     res.json({ success: true, user: { id: created.id, name: created.name, email: created.email, status: created.status } });
   } catch (err) { next(err); }
@@ -174,7 +182,7 @@ export async function createUser(req: Request, res: Response, next: NextFunction
 export async function editUser(req: Request, res: Response, next: NextFunction) {
   try {
     const id = req.params.id as string;
-    const { name, email, status, password } = req.body;
+    const { name, email, status, password, height, weight, age, sex, activityLevel, avatarUrl, theme } = req.body;
     const user = await prisma.user.findUnique({ where: { id } });
     if (!user) throw new AppError(404, 'Usuario no encontrado');
     if (email && email !== user.email) {
@@ -194,6 +202,16 @@ export async function editUser(req: Request, res: Response, next: NextFunction) 
     if (name !== undefined) data.name = name;
     if (email !== undefined) data.email = email;
     if (status !== undefined) data.status = status;
+    if (height !== undefined) data.height = height === '' || height === null ? null : Number(height);
+    if (weight !== undefined) data.weight = weight === '' || weight === null ? null : Number(weight);
+    if (age !== undefined) data.age = age === '' || age === null ? null : parseInt(String(age),10);
+    if (sex !== undefined) data.sex = sex === '' ? null : String(sex);
+    if (activityLevel !== undefined) data.activityLevel = activityLevel === '' || activityLevel === null ? null : Number(activityLevel);
+    if (avatarUrl !== undefined) data.avatarUrl = avatarUrl === '' || avatarUrl === null ? null : (sanitizeUrl(avatarUrl) || String(avatarUrl).slice(0,2048));
+    if (theme !== undefined) {
+      const t = String(theme);
+      if (t === 'default' || t === 'system-shadow' || t === 'peach') data.theme = t;
+    }
     if (password !== undefined && password !== '' && password !== null) {
       data.password = await bcrypt.hash(String(password), 10);
       data.refreshToken = null;

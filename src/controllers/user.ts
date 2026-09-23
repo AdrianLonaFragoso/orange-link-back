@@ -22,6 +22,7 @@ export async function getProfile(req: Request, res: Response, next: NextFunction
         sex: user.sex,
         activityLevel: user.activityLevel,
         avatarUrl: user.avatarUrl,
+        theme: (user as any).theme || 'default',
       },
     });
   } catch (err) {
@@ -32,7 +33,7 @@ export async function getProfile(req: Request, res: Response, next: NextFunction
 export async function updateProfile(req: Request, res: Response, next: NextFunction) {
   try {
     const userId = req.authUser!.userId;
-    const { name, email, height, weight, age, sex, activityLevel, avatarUrl } = req.body;
+    const { name, email, height, weight, age, sex, activityLevel, avatarUrl, theme } = req.body;
 
     const data: Record<string, any> = {};
     if (name !== undefined) data.name = name;
@@ -42,6 +43,10 @@ export async function updateProfile(req: Request, res: Response, next: NextFunct
     if (sex !== undefined) data.sex = sex;
     if (activityLevel !== undefined) data.activityLevel = activityLevel;
     if (avatarUrl !== undefined) data.avatarUrl = avatarUrl;
+    if (theme !== undefined) {
+      const t = String(theme);
+      if (t === 'default' || t === 'system-shadow' || t === 'peach') data.theme = t;
+    }
 
     const user = await prisma.user.update({
       where: { id: userId },
@@ -59,6 +64,7 @@ export async function updateProfile(req: Request, res: Response, next: NextFunct
         sex: user.sex,
         activityLevel: user.activityLevel,
         avatarUrl: user.avatarUrl,
+        theme: (user as any).theme || 'default',
       },
     });
   } catch (err) {

@@ -21,6 +21,7 @@ model User {
   age          Int?
   sex          String?  // "male" | "female"
   activityLevel Float?  @map("activity_level") // 1.2 | 1.5 | 1.8 | 2.2
+  theme        String?  @default("default") // "default" | "system-shadow" | "peach" — forzado por admin
   createdAt    DateTime @default(now()) @map("created_at")
   updatedAt    DateTime @updatedAt @map("updated_at")
 

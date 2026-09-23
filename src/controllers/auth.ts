@@ -98,6 +98,13 @@ export async function login(req: Request, res: Response, next: NextFunction) {
         name: user.name,
         email: user.email,
         registrationDate: user.createdAt.toISOString(),
+        height: user.height,
+        weight: user.weight,
+        age: user.age,
+        sex: user.sex,
+        activityLevel: user.activityLevel,
+        avatarUrl: user.avatarUrl,
+        theme: (user as any).theme || 'default',
       },
     });
   } catch (err) {
@@ -178,6 +185,7 @@ export async function me(req: Request, res: Response, next: NextFunction) {
         sex: user.sex,
         activityLevel: user.activityLevel,
         avatarUrl: user.avatarUrl,
+        theme: (user as any).theme || 'default',
       },
     });
   } catch (err) {
