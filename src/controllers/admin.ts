@@ -174,7 +174,7 @@ export async function createUser(req: Request, res: Response, next: NextFunction
 export async function editUser(req: Request, res: Response, next: NextFunction) {
   try {
     const id = req.params.id as string;
-    const { name, email, status } = req.body;
+    const { name, email, status, password } = req.body;
     const user = await prisma.user.findUnique({ where: { id } });
     if (!user) throw new AppError(404, 'Usuario no encontrado');
     if (email && email !== user.email) {
@@ -184,10 +184,20 @@ export async function editUser(req: Request, res: Response, next: NextFunction) 
         res.status(409).json({ error: `El email `+email+` ya está en uso` }); return;
       }
     }
+    if (password !== undefined && password !== '' && password !== null) {
+      if (String(password).length < 4) {
+        if (wantsJson(req)) { res.status(400).json({ error: 'La contraseña debe tener al menos 4 caracteres' }); return; }
+        res.status(400).json({ error: 'La contraseña debe tener al menos 4 caracteres' }); return;
+      }
+    }
     const data: any = {};
     if (name !== undefined) data.name = name;
     if (email !== undefined) data.email = email;
     if (status !== undefined) data.status = status;
+    if (password !== undefined && password !== '' && password !== null) {
+      data.password = await bcrypt.hash(String(password), 10);
+      data.refreshToken = null;
+    }
     const updated = await prisma.user.update({ where: { id }, data });
     if (wantsJson(req)) { res.json({ success: true, user: { id: updated.id, name: updated.name, email: updated.email, status: updated.status } }); return; }
     res.json({ success: true, user: { id: updated.id, name: updated.name, email: updated.email, status: updated.status } });

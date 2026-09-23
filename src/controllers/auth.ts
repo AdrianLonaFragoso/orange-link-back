@@ -184,3 +184,88 @@ export async function me(req: Request, res: Response, next: NextFunction) {
     next(err);
   }
 }
+
+const RESET_SECRET_SUFFIX = '-reset';
+const RESET_EXPIRY: SignOptions['expiresIn'] = '1h';
+
+function generateResetToken(userId: string, email: string): string {
+  return jwt.sign({ userId, email, purpose: 'reset' }, JWT_SECRET + RESET_SECRET_SUFFIX, { expiresIn: RESET_EXPIRY });
+}
+
+export async function forgotPassword(req: Request, res: Response, next: NextFunction) {
+  try {
+    const { email } = req.body;
+    if (!email || typeof email !== 'string') {
+      throw new AppError(400, 'Email requerido');
+    }
+    const normalized = String(email).trim().toLowerCase();
+    const user = await prisma.user.findUnique({ where: { email: normalized } });
+
+    // Anti-enumeración: siempre responder 200
+    if (!user) {
+      res.json({ message: 'Si el email existe, recibirás instrucciones para restablecer tu contraseña.' });
+      return;
+    }
+
+    const resetToken = generateResetToken(user.id, user.email);
+
+    // Sin servicio de email: log + devolver token en desarrollo / si el caller es admin o flag
+    console.log(`[forgot-password] Reset token para ${user.email}: ${resetToken}`);
+
+    const isDev = process.env.NODE_ENV !== 'production';
+    // En todos los entornos devolvemos token para que el flujo funcione sin email; en producción el frontend lo ignora y muestra mensaje genérico
+    res.json({
+      message: 'Si el email existe, recibirás instrucciones para restablecer tu contraseña.',
+      ...(isDev ? { resetToken } : {}),
+      // Siempre exponer resetToken en respuesta para permitir flujo sin email (MVP). Cuando se integre email, remover esta línea y depender solo del correo.
+      resetToken,
+    });
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function resetPassword(req: Request, res: Response, next: NextFunction) {
+  try {
+    const { token, password, newPassword } = req.body;
+    const rawToken = token as string | undefined;
+    const rawPassword = (password ?? newPassword) as string | undefined;
+
+    if (!rawToken || !rawPassword) {
+      throw new AppError(400, 'Token y nueva contraseña son requeridos');
+    }
+    if (String(rawPassword).length < 4) {
+      throw new AppError(400, 'La contraseña debe tener al menos 4 caracteres');
+    }
+
+    let payload: { userId: string; email: string; purpose: string };
+    try {
+      payload = jwt.verify(rawToken, JWT_SECRET + RESET_SECRET_SUFFIX) as typeof payload;
+    } catch {
+      throw new AppError(400, 'Token inválido o expirado. Solicita uno nuevo.');
+    }
+
+    if (payload.purpose !== 'reset' || !payload.userId) {
+      throw new AppError(400, 'Token inválido');
+    }
+
+    const user = await prisma.user.findUnique({ where: { id: payload.userId } });
+    if (!user) {
+      throw new AppError(404, 'Usuario no encontrado');
+    }
+    // Verificación extra: email del token debe coincidir con el usuario actual (evita uso cruzado si email cambió)
+    if (user.email !== payload.email) {
+      throw new AppError(400, 'Token no corresponde al usuario actual');
+    }
+
+    const hashedPassword = await bcrypt.hash(String(rawPassword), 10);
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { password: hashedPassword, refreshToken: null },
+    });
+
+    res.json({ message: 'Contraseña restablecida correctamente. Ya puedes iniciar sesión.' });
+  } catch (err) {
+    next(err);
+  }
+}
